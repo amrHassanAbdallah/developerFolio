@@ -1,43 +1,43 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5a29550695515022e2db1b42f1e8bc8c",
+    "revision": "705a8e964664cadb77af11713b83cc1c",
     "url": "/index.html"
   },
   {
-    "revision": "674b7548532f5445fe3a",
+    "revision": "08126c3915a5f1052df2",
     "url": "/static/css/3.df879eac.chunk.css"
   },
   {
-    "revision": "3a8c4cea4c988b2cd748",
+    "revision": "4013ff7b5982377cc1bf",
     "url": "/static/css/4.d7ceb645.chunk.css"
   },
   {
-    "revision": "25c1ef0400ee24cb9bb2",
-    "url": "/static/css/main.edd4eea5.chunk.css"
+    "revision": "418fbf61aba5ea0f9160",
+    "url": "/static/css/main.129bc1c9.chunk.css"
   },
   {
-    "revision": "5cc38e752cb0ec53f050",
-    "url": "/static/js/2.5faca078.chunk.js"
+    "revision": "43ac8d78b8b92d591e8a",
+    "url": "/static/js/2.d59e30be.chunk.js"
   },
   {
     "revision": "b7dab8c89ada76fba4cbf1265c4a24b0",
-    "url": "/static/js/2.5faca078.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.d59e30be.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "674b7548532f5445fe3a",
-    "url": "/static/js/3.a793808b.chunk.js"
+    "revision": "08126c3915a5f1052df2",
+    "url": "/static/js/3.bc596441.chunk.js"
   },
   {
-    "revision": "3a8c4cea4c988b2cd748",
-    "url": "/static/js/4.7ab15030.chunk.js"
+    "revision": "4013ff7b5982377cc1bf",
+    "url": "/static/js/4.18053b48.chunk.js"
   },
   {
-    "revision": "25c1ef0400ee24cb9bb2",
-    "url": "/static/js/main.571d449c.chunk.js"
+    "revision": "418fbf61aba5ea0f9160",
+    "url": "/static/js/main.85df0d2d.chunk.js"
   },
   {
-    "revision": "9d39dbe20eec015cf934",
-    "url": "/static/js/runtime-main.47e0f9ca.js"
+    "revision": "1afed511317a776a4548",
+    "url": "/static/js/runtime-main.515e7b82.js"
   },
   {
     "revision": "21f233e19402cc4a66866a7f31191f0d",
@@ -106,5 +106,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "13780cdd0144cacdef25486e2c2503f8",
     "url": "/static/media/talksCardBack.13780cdd.svg"
+  },
+  {
+    "revision": "e3d6e9ea74f51afbfc9071e214ddb9e8",
+    "url": "/static/media/times new roman italic.e3d6e9ea.ttf"
   }
 ]);

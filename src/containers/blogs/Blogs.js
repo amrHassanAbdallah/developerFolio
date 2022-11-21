@@ -4,6 +4,7 @@ import BlogCard from "../../components/blogCard/BlogCard";
 import {blogSection} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
+import Button from "../../components/button/Button";
 export default function Blogs() {
   const {isDark} = useContext(StyleContext);
   const [mediumBlogs, setMediumBlogs] = useState([]);
@@ -91,6 +92,15 @@ export default function Blogs() {
                   );
                 })}
           </div>
+        </div>
+        <div className="button-greeting-div-center">
+          {blogSection.seeMore && (
+            <Button
+                text="Want to see more?"
+                newTab={true}
+                href={blogSection.seeMore}
+            />
+        )}
         </div>
       </div>
     </Fade>

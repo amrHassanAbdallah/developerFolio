@@ -1,5 +1,11 @@
 @import "./globalColor";
 
+@font-face {
+  font-family: "tnr-italic";   /*Can be any text*/
+  src: local("times new roman italic"),
+  url("./assets/fonts/times new roman italic.ttf") format("truetype");
+}
+
 .App {
   text-align: center;
   width: 100%;

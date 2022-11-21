@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.scss";
+import "./assets/fonts/times new roman italic.ttf";
 import Main from "./containers/Main";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 

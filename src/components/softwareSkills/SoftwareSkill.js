@@ -3,24 +3,26 @@ import "./SoftwareSkill.scss";
 import {skillsSection} from "../../portfolio";
 
 export default function SoftwareSkill() {
-  return (
-    <div>
-      <div className="software-skills-main-div">
-        <ul className="dev-icons">
-          {skillsSection.softwareSkills.map((skills, i) => {
-            return (
-              <li
-                key={i}
-                className="software-skill-inline"
-                name={skills.skillName}
-              >
-                <i className={skills.fontAwesomeClassname}></i>
-                <p>{skills.skillName}</p>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    </div>
-  );
-}
+    return (
+        <div>
+            <div className="software-skills-main-div">
+                <dev class="skills-listing">
+
+                    {skillsSection.softwareSkills.map((skills, i) => {
+                        return (
+                            <dev key={i} className="newWrapper">
+                                <div className="new">{skills.skillName}
+                                    <span className="new-separator"></span>
+                                    <span
+                                        className="new-years_">{skills.experience}</span>
+                                </div>
+                            </dev>
+                        );
+                    })}
+                </dev>
+
+                    </div>
+                    </div>
+                    )
+                        ;
+                    }

@@ -15,7 +15,7 @@ function App() {
                     window.ga(
                         'set',
                         'page',
-                        location.pathname + location.search
+                        "/resume"
                     );
                     window.ga('send', 'pageview');
                     return null;

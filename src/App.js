@@ -11,15 +11,27 @@ function App() {
         <Routes>
             <Route path="/">
                 <Route index element={<Main />} />
-                <Route path="/resume" render={({ location }) => {
-                    window.ga(
-                        'set',
-                        'page',
-                        "/resume"
-                    );
-                    window.ga('send', 'pageview');
-                    return null;
-                }} element={<Resume />} />
+            </Route>
+            <Route path="/resume" render={({ location }) => {
+                window.ga(
+                    'set',
+                    'page',
+                    "/resume"
+                );
+                window.ga('send', 'pageview');
+                return null;
+            }} element={<Resume />} />
+            <Route path="/skills">
+                <Route index element={<Main />} />
+            </Route>
+            <Route path="/opensource">
+                <Route index element={<Main />} />
+            </Route>
+            <Route path="/blogs">
+                <Route index element={<Main />} />
+            </Route>
+            <Route path="/contact">
+                <Route index element={<Main />} />
             </Route>
         </Routes>
     </HashRouter>

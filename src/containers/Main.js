@@ -38,6 +38,26 @@ const Main = () => {
     }
   }, []);
 
+  useEffect(() => {
+    let elements = window.location.href.split("/#/")
+    let target = elements.length > 1 ? elements[1]:null
+    if(!isShowingSplashAnimation && target != null){
+      scrollToTarget(target);
+    }
+  },[isShowingSplashAnimation])
+
+  const scrollToTarget = (tag) => {
+    setTimeout(() => {
+      let target =  document.getElementById(tag)
+      if (target){
+        target.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+
+    }, 100);
+  };
+
   const changeTheme = () => {
     setIsDark(!isDark);
   };

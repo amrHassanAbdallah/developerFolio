@@ -6,7 +6,7 @@ export default function SoftwareSkill() {
     return (
         <div>
             <div className="software-skills-main-div">
-                <dev class="skills-listing">
+                <dev className="skills-listing">
 
                     {skillsSection.softwareSkills.map((skills, i) => {
                         return (
@@ -21,8 +21,7 @@ export default function SoftwareSkill() {
                     })}
                 </dev>
 
-                    </div>
-                    </div>
-                    )
-                        ;
-                    }
+            </div>
+        </div>
+    );
+}

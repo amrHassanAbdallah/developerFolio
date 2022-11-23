@@ -1,0 +1,12 @@
+@import "../../_globalColor";
+.iframe-pdf{
+  height: 100vh;
+}
+iframe{
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+}

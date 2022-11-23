@@ -32,7 +32,7 @@ const greeting = {
         "I'm a life-long learner and creative Software Engineer, with +" + (new Date().getFullYear() - 2016) + " years of professional experience in building web applications using Node.js, Golang and PHP."
     ),
     resumeLink:
-        "/resume.pdf", // Set to empty to hide the button
+        "/#/resume", // Set to empty to hide the button
     displayGreeting: true // Set false to hide this section, defaults to true
 };
 

@@ -5,7 +5,7 @@ import "./Resume.scss";
 export default function Resume() {
   return (
       <div className="iframe-pdf">
-        <iframe src="./resume.pdf"  ></iframe>
+        <iframe title="resume" src="./resume.pdf"></iframe>
       </div>
   );
 }

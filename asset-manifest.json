@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.585feb0b.chunk.css",
-    "main.js": "/static/js/main.b0a6e124.chunk.js",
-    "main.js.map": "/static/js/main.b0a6e124.chunk.js.map",
+    "main.js": "/static/js/main.b1f0822a.chunk.js",
+    "main.js.map": "/static/js/main.b1f0822a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.515e7b82.js",
     "runtime-main.js.map": "/static/js/runtime-main.515e7b82.js.map",
-    "static/js/2.d59e30be.chunk.js": "/static/js/2.d59e30be.chunk.js",
-    "static/js/2.d59e30be.chunk.js.map": "/static/js/2.d59e30be.chunk.js.map",
+    "static/js/2.13d3db7e.chunk.js": "/static/js/2.13d3db7e.chunk.js",
+    "static/js/2.13d3db7e.chunk.js.map": "/static/js/2.13d3db7e.chunk.js.map",
     "static/css/3.df879eac.chunk.css": "/static/css/3.df879eac.chunk.css",
     "static/js/3.bc596441.chunk.js": "/static/js/3.bc596441.chunk.js",
     "static/js/3.bc596441.chunk.js.map": "/static/js/3.bc596441.chunk.js.map",
@@ -14,12 +14,12 @@
     "static/js/4.18053b48.chunk.js": "/static/js/4.18053b48.chunk.js",
     "static/js/4.18053b48.chunk.js.map": "/static/js/4.18053b48.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.c383157ba219be89e2828584bb3a29ed.js": "/precache-manifest.c383157ba219be89e2828584bb3a29ed.js",
+    "precache-manifest.736010848b7f0e0a91380b4487eefccb.js": "/precache-manifest.736010848b7f0e0a91380b4487eefccb.js",
     "service-worker.js": "/service-worker.js",
     "static/css/3.df879eac.chunk.css.map": "/static/css/3.df879eac.chunk.css.map",
     "static/css/4.d7ceb645.chunk.css.map": "/static/css/4.d7ceb645.chunk.css.map",
     "static/css/main.585feb0b.chunk.css.map": "/static/css/main.585feb0b.chunk.css.map",
-    "static/js/2.d59e30be.chunk.js.LICENSE.txt": "/static/js/2.d59e30be.chunk.js.LICENSE.txt",
+    "static/js/2.13d3db7e.chunk.js.LICENSE.txt": "/static/js/2.13d3db7e.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/Montserrat-Regular.ee653992.ttf",
     "static/media/airbnbLogo.png": "/static/media/airbnbLogo.e8497507.png",
     "static/media/codeInLogo.webp": "/static/media/codeInLogo.47a7a717.webp",
@@ -40,8 +40,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.515e7b82.js",
-    "static/js/2.d59e30be.chunk.js",
+    "static/js/2.13d3db7e.chunk.js",
     "static/css/main.585feb0b.chunk.css",
-    "static/js/main.b0a6e124.chunk.js"
+    "static/js/main.b1f0822a.chunk.js"
   ]
 }

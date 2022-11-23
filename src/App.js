@@ -11,7 +11,15 @@ function App() {
         <Routes>
             <Route path="/">
                 <Route index element={<Main />} />
-                <Route path="/resume" element={<Resume />} />
+                <Route path="/resume" render={({ location }) => {
+                    window.ga(
+                        'set',
+                        'page',
+                        location.pathname + location.search
+                    );
+                    window.ga('send', 'pageview');
+                    return null;
+                }} element={<Resume />} />
             </Route>
         </Routes>
     </HashRouter>

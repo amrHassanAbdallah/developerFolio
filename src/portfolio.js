@@ -42,10 +42,8 @@ const socialMediaLinks = {
     github: "https://github.com/amrHassanAbdallah",
     linkedin: "https://www.linkedin.com/in/amr-hassan-abdullah/",
     gmail: "amr.hassan.abdullah@gmail.com",
+    twitter: "https://twitter.com/amrh434",
     stackoverflow: "https://stackoverflow.com/users/7331793/amr-h",
-    // Instagram, Twitter and Kaggle are also supported in the links!
-    // To customize icons and social links, tweak src/components/SocialMedia
-    // todo add twitter icons
     display: true // Set true to display this section, defaults to false
 };
 
@@ -88,6 +86,9 @@ const skillsSection = {
             "experience": yearsOfExperience.pro
         }, {"skillName": "REST", "experience": yearsOfExperience.pro}, {
             "skillName": "SQL",
+            "experience": yearsOfExperience.pro
+        },{
+            "skillName": "TDD",
             "experience": yearsOfExperience.pro
         }, {"skillName": "AWS (Amazon Web Services)", "experience": yearsOfExperience.beginner}, {
             "skillName": "CircleCI",
@@ -133,26 +134,14 @@ const skillsSection = {
 // Education Section
 
 const educationInfo = {
-    display: false, // Set false to hide this section, defaults to true
+    display: true, // Set false to hide this section, defaults to true
     schools: [
         {
-            schoolName: "Harvard University",
-            logo: require("./assets/images/harvardLogo.png"),
-            subHeader: "Master of Science in Computer Science",
-            duration: "September 2017 - April 2019",
-            desc: "Participated in the research of XXX and published 3 papers.",
-            descBullets: [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-            ]
-        },
-        {
-            schoolName: "Stanford University",
-            logo: require("./assets/images/stanfordLogo.png"),
+            schoolName: "Helwan University",
+            logo: require("./assets/images/helwanLogo.jpeg"),
             subHeader: "Bachelor of Science in Computer Science",
-            duration: "September 2013 - April 2017",
-            desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
-            descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
+            duration: "September 2015 - April 2019",
+            desc: "Scored excellent in the graduation project.",
         }
     ]
 };
@@ -181,33 +170,58 @@ const techStack = {
 // Work experience section
 
 const workExperiences = {
-    display: false, //Set it to true to show workExperiences Section
+    display: true, //Set it to true to show workExperiences Section
     experience: [
         {
-            role: "Software Engineer",
-            company: "Facebook",
-            companylogo: require("./assets/images/facebookLogo.png"),
-            date: "June 2018 – Present",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            role: "Senior Software Engineer",
+            company: "SWVL",
+            companylogo: require("./assets/images/swvlLogo.jpeg"),
+            date: "Jan 2022 – Present",
             descBullets: [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                "Supervise a team of 7 engineers.",
+                "Partnered with business teams and operators to ensure problems were addressed and corrected.",
+                "Decreased the number of fetched resources by ~0.001x for the TaaS solution which in return reduced the execution time & the bigQuery’s bill.",
+                "Enhanced the docs for system designs as well as planning system improvements."
             ]
         },
         {
-            role: "Front-End Developer",
-            company: "Quora",
-            companylogo: require("./assets/images/quoraLogo.png"),
-            date: "May 2017 – May 2018",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            role: "FullStack JavaScript Session Lead",
+            company: "Udacity",
+            companylogo: require("./assets/images/udacityLogo.jpeg"),
+            date: "Dec 2021 - Present ",
+            descBullets: [
+                "Made FAQ documents which reduced students' questions & boosted the graduation rate.",
+                "Built relationships with over 50 students and ensured all students felt attended to with personalized feedback, class discussions, and encouragement",
+                "Provide informative presentations to students regarding different areas of study and ensure that all students fully",
+            ]
         },
         {
-            role: "Software Engineer Intern",
-            company: "Airbnb",
-            companylogo: require("./assets/images/airbnbLogo.png"),
-            date: "Jan 2015 – Sep 2015",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        }
+            role: "Software Engineer",
+            company: "Magalix",
+            companylogo: require("./assets/images/magalixLogo.jpeg"),
+            date: "Sep 2019 - Dec 2021",
+            descBullets: [
+                "Reduced time-series data serving from 600ms (90th percentile) to 100ms (90th percentile) and expanded write",
+                "Extended the web application by integrating with Zapier, Slack, and Jira webhooks and amplified the ingestion rate by 10x.",
+                "Researched a way to manage workflows which strengthened the extensibility and visibility of the system by 2x factor.",
+                "Minimized the traffic across the network to be 2 requests per hour instead of 60 per hour for each cluster status.",
+                "Collaborated closely with other roles within the SDLC (e.g. project management, DevOps, and QA)",
+                "Awarded exceptional achievement award for consistently fixing and stabilizing the dev environment."
+            ]
+        },
+        {
+            role: "Software Engineer",
+            company: "Teknowl",
+            companylogo: require("./assets/images/teknowlLogo.jpeg"),
+            date: "Nov 2017 - Nov 2018",
+            descBullets: [
+                "Implemented a content-type HAL package that that allowed joining data with simple keywords, which saved our time by 500%",
+                "Optimized MySQL queries by reducing the number of executing queries on multiple pages by 27%.",
+                "Promoted productivity and quality standards by sharing tech resources and reflecting on them with the team.",
+                "Presented and demonstrated solutions by developing documentation, flowcharts, layouts, diagrams, charts.",
+            ]
+        },
+
     ]
 };
 
@@ -390,7 +404,6 @@ const twitterDetails = {
     display: false // Set true to display this section, defaults to false
 };
 
-const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
     illustration,
@@ -409,5 +422,4 @@ export {
     podcastSection,
     contactInfo,
     twitterDetails,
-    isHireable
 };

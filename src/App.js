@@ -33,6 +33,9 @@ function App() {
             <Route path="/contact">
                 <Route index element={<Main />} />
             </Route>
+            <Route path="/experience">
+                <Route index element={<Main />} />
+            </Route>
         </Routes>
     </HashRouter>
   );

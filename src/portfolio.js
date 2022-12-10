@@ -204,7 +204,7 @@ const workExperiences = {
                 "Reduced time-series data serving from 600ms (90th percentile) to 100ms (90th percentile) and expanded write",
                 "Extended the web application by integrating with Zapier, Slack, and Jira webhooks and amplified the ingestion rate by 10x.",
                 "Researched a way to manage workflows which strengthened the extensibility and visibility of the system by 2x factor.",
-                "Minimized the traffic across the network to be 2 requests per hour instead of 60 per hour for each cluster status.",
+                "Minimized the network traffic to 2 requests per hour instead of 60 per hour for each cluster status.",
                 "Collaborated closely with other roles within the SDLC (e.g. project management, DevOps, and QA)",
                 "Awarded exceptional achievement award for consistently fixing and stabilizing the dev environment."
             ]

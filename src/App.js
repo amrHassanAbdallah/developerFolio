@@ -4,6 +4,7 @@ import "./assets/fonts/times new roman italic.ttf";
 import Main from "./containers/Main";
 import {HashRouter, Route, Routes} from "react-router-dom";
 import Resume from "./pages/resume/Resume";
+import CertificatesPage from "./pages/certificates/CertificatesPage.js";
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
             </Route>
             <Route path="/experience">
                 <Route index element={<Main />} />
+            </Route>
+            <Route path="/certificates">
+                <Route index element={<CertificatesPage />} />
             </Route>
         </Routes>
     </HashRouter>

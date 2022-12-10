@@ -49,6 +49,11 @@ function Header() {
               <a href="/#/experience" onClick={()=>scroll("experience")}>Work Experiences</a>
             </li>
           )}
+          {viewExperience && (
+              <li>
+                <a href="/#/certificates">Certificates</a>
+              </li>
+          )}
           {viewOpenSource && (
             <li>
               <a href="/#/opensource" onClick={()=>scroll("opensource")}>Open Source</a>

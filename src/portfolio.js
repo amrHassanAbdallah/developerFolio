@@ -146,6 +146,19 @@ const educationInfo = {
     ]
 };
 
+const certificates = {
+    display: true, // Set false to hide this section, defaults to true
+    schools: [
+        {
+            schoolName: "Helwan University",
+            logo: require("./assets/images/helwanLogo.jpeg"),
+            subHeader: "Bachelor of Science in Computer Science",
+            duration: "September 2015 - April 2019",
+            desc: "Scored excellent in the graduation project.",
+        }
+    ]
+};
+
 // Your top 3 proficient stacks/tech experience
 
 const techStack = {
@@ -422,4 +435,5 @@ export {
     podcastSection,
     contactInfo,
     twitterDetails,
+    certificates
 };

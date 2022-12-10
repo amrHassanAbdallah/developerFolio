@@ -215,7 +215,7 @@ const workExperiences = {
             companylogo: require("./assets/images/teknowlLogo.jpeg"),
             date: "Nov 2017 - Nov 2018",
             descBullets: [
-                "Implemented a content-type HAL package that that allowed joining data with simple keywords, which saved our time by 500%",
+                "Implemented a content-type HAL package that allowed joining data with simple keywords, which saved our time by 500%",
                 "Optimized MySQL queries by reducing the number of executing queries on multiple pages by 27%.",
                 "Promoted productivity and quality standards by sharing tech resources and reflecting on them with the team.",
                 "Presented and demonstrated solutions by developing documentation, flowcharts, layouts, diagrams, charts.",

@@ -3,6 +3,7 @@ env:
   CI: false
   GITHUB_USERNAME: ${{ github.repository_owner }}
   REACT_APP_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This is automatically set by Github Actions
+  RESUME_DOCUMENT_ID: ${{ secrets.RESUME_DOCUMENT_ID }}
   USE_GITHUB_DATA: "true"
   MEDIUM_USERNAME: "" # Change this to your medium username
 on:
@@ -22,7 +23,6 @@ jobs:
       - name: Create config files
         run: |
           echo ${{ secrets.CREDENTIALS_FILE }} | base64 -d > ./token.json
-          ls
       - name: Install and Build 🔧 # Build the Project
         run: |
           npm install

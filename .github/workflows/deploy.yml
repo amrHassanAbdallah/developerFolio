@@ -5,7 +5,6 @@ env:
   REACT_APP_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This is automatically set by Github Actions
   RESUME_DOCUMENT_ID: ${{ secrets.RESUME_DOCUMENT_ID }}
   USE_GITHUB_DATA: "true"
-  MEDIUM_USERNAME: "" # Change this to your medium username
 on:
   push:
     branches:

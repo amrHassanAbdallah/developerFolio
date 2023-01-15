@@ -29,7 +29,7 @@ const greeting = {
     username: "Amr Hassan",
     title: "Hi all, I'm Amr",
     subTitle: emoji(
-        "I'm a life-long learner and creative Software Engineer, with +" + (new Date().getFullYear() - 2016) + " years of professional experience in building web applications using Node.js, Golang and PHP."
+        "As a software engineer with " + (new Date().getFullYear() - 2017) + "+ years of experience and a relentless passion for technology, I have honed my skills in a wide range of programming languages such as Nodejs, Golang, PHP, and many others. My expertise extends to multiple technologies like bigQuery, MongoDB, GCP, AWS and more. I am a problem-solver, a fast learner and a creative thinker who thrives on taking on new challenges. My ultimate goal is to create innovative solutions that make a real impact and drive the industry forward. Additionally, I am passionate about writing technical blogs and sharing my knowledge and experience with others to help them learn and grow in their careers."
     ),
     resumeLink:
         "/#/resume", // Set to empty to hide the button

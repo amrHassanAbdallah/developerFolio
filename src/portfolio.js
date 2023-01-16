@@ -56,9 +56,10 @@ const skillsSection = {
         emoji(
             "⚡ Building the right thing the right way"
         ),
-        emoji("⚡ Optimize and scale applications"),
+        emoji("⚡ Proficient in performance optimization and scalability, with a track record of success in improving system performance and increasing throughput"),
+        emoji("⚡ Strong experience in microservices architecture and cloud platforms, including GCP and AWS."),
         emoji(
-            "⚡ Influencing others"
+            "⚡ Skilled in workflow management and documentation, with a focus on maintaining coding quality standards and collaborating with cross-functional teams."
         )
     ],
 

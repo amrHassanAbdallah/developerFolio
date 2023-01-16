@@ -179,10 +179,12 @@ const workExperiences = {
             companylogo: require("./assets/images/swvlLogo.jpeg"),
             date: "Jan 2022 – Present",
             descBullets: [
-                "Supervise a team of 7 engineers.",
-                "Partnered with business teams and operators to ensure problems were addressed and corrected.",
-                "Decreased the number of fetched resources by ~0.001x for the TaaS solution which in return reduced the execution time & the bigQuery’s bill.",
-                "Enhanced the docs for system designs as well as planning system improvements."
+                "Led a team of 7 engineers to deliver high-quality and efficient solutions",
+                "Implemented a solution that reduced the number of resources fetched by ~0.001x for the TaaS solution, resulting in decreased execution time and reduced bigQuery bill.",
+                "Reviewed many PRs and established coding quality standards.",
+                "Refactored duplicated and unmonitored TaaS apps into our k8s cluster and automated part of the work, which improved the reliability and reduced the overall needed work.",
+                "Improved the stability and visibility of our B2B k8s environments by adding monitoring dashboards, creating playbooks and improving deployment scripts.",
+                "Led technical and business discussions to understand customer needs and drive system improvements.",
             ]
         },
         {
@@ -191,9 +193,9 @@ const workExperiences = {
             companylogo: require("./assets/images/udacityLogo.jpeg"),
             date: "Dec 2021 - Present ",
             descBullets: [
-                "Made FAQ documents which reduced students' questions & boosted the graduation rate.",
-                "Built relationships with over 50 students and ensured all students felt attended to with personalized feedback, class discussions, and encouragement",
-                "Provide informative presentations to students regarding different areas of study and ensure that all students fully",
+                "Led informative presentations and provided code snippets to students in various areas of study to enhance their understanding and ensure adherence to course content.",
+                "Developed FAQ documents that reduced student inquiries and improved graduation rates.",
+                "Built strong relationships with over 50 students, providing personalized feedback, leading class discussions and offering encouragement to support their learning and success.",
             ]
         },
         {
@@ -202,12 +204,11 @@ const workExperiences = {
             companylogo: require("./assets/images/magalixLogo.jpeg"),
             date: "Sep 2019 - Dec 2021",
             descBullets: [
-                "Reduced time-series data serving from 600ms (90th percentile) to 100ms (90th percentile) and expanded write",
-                "Extended the web application by integrating with Zapier, Slack, and Jira webhooks and amplified the ingestion rate by 10x.",
-                "Researched a way to manage workflows which strengthened the extensibility and visibility of the system by 2x factor.",
-                "Minimized the network traffic to 2 requests per hour instead of 60 per hour for each cluster status.",
-                "Collaborated closely with other roles within the SDLC (e.g. project management, DevOps, and QA)",
-                "Awarded exceptional achievement award for consistently fixing and stabilizing the dev environment."
+                "Improved time-series data serving performance by reducing response time from 600ms to 100ms and expanding write throughput.",
+                "Developed an application that integrates with Zapier, Slack, and Jira webhooks to extend recommendations analysis beyond the web application, identified a bottleneck and implemented circuit breakers, which increased the ingestion rate by 10x.",
+                "Led the process of establishing high-quality user and functional requirements based on identified business needs for 3 services.",
+                "Simplified connected cluster tracking by recording only the last seen time when needed, resulting in a reduction of network traffic by 2 requests per hour instead of 60 per hour for each cluster.",
+                "Received exceptional achievement award for consistently fixing and stabilizing the development environment.",
             ]
         },
         {
@@ -216,10 +217,12 @@ const workExperiences = {
             companylogo: require("./assets/images/teknowlLogo.jpeg"),
             date: "Nov 2017 - Nov 2018",
             descBullets: [
-                "Implemented a content-type HAL package that allowed joining data with simple keywords, which saved our time by 500%",
-                "Optimized MySQL queries by reducing the number of executing queries on multiple pages by 27%.",
-                "Promoted productivity and quality standards by sharing tech resources and reflecting on them with the team.",
-                "Presented and demonstrated solutions by developing documentation, flowcharts, layouts, diagrams, charts.",
+                "Implemented a content-type HAL package that abstracted the rendering logic between different models, which allowed joining data with simple keywords and streamlined the process of adding new relations, resulting in a 500% time savings.",
+                "Integrated Elasticsearch and designed its mapping and data sync, which significantly improved search capabilities by 3x, and added role-based search functionality.",
+                "Optimized MySQL queries by reducing the number of executed queries on multiple pages by 27%.",
+                "Promoted productivity and quality standards by sharing technical resources and encouraging team reflection on them.",
+                "Communicated solutions effectively by developing documentation, flowcharts, layouts, diagrams, and charts.",
+                "Led the shaping and maintenance of coding standards for a team of 5 backend engineers.",
             ]
         },
 

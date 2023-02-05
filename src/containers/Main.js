@@ -19,6 +19,7 @@ import {splashScreen} from "../portfolio";
 import {StyleProvider} from "../contexts/StyleContext";
 import {useLocalStorage} from "../hooks/useLocalStorage";
 import "./Main.scss";
+import {PopupButton} from "react-calendly";
 
 const Main = () => {
   const darkPref = window.matchMedia("(prefers-color-scheme: dark)");

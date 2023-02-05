@@ -47,6 +47,8 @@ export default function Contact() {
               >
                 {contactInfo.email_address}
               </a>
+
+              <h4>If you are not emails lover, I got you covered just click on "Let's talk" button</h4>
               <br />
               <br />
               <SocialMedia />
@@ -62,6 +64,7 @@ export default function Contact() {
               ></img>
             )}
           </div>
+
         </div>
       </div>
     </Fade>

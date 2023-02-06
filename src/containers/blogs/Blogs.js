@@ -96,11 +96,11 @@ export default function Blogs() {
         <div className="button-greeting-div-center">
           {blogSection.seeMore && (
             <Button
-                text="Want to see more?"
-                newTab={true}
-                href={blogSection.seeMore}
+              text="Want to see more?"
+              newTab={true}
+              href={blogSection.seeMore}
             />
-        )}
+          )}
         </div>
       </div>
     </Fade>

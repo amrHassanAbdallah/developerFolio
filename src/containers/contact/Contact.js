@@ -9,67 +9,73 @@ import StyleContext from "../../contexts/StyleContext";
 import CalandlyButton from "../../components/calendlyButton/CalandlyButton";
 
 export default function Contact() {
-    const {isDark} = useContext(StyleContext);
-    return (
-        <Fade bottom duration={1000} distance="20px">
-            <div className="main contact-margin-top" id="contact">
-                <div className="contact-div-main">
-                    <div className="contact-header">
-                        <h1 className="heading contact-title">{contactInfo.title}</h1>
-                        <p
-                            className={
-                                isDark
-                                    ? "dark-mode contact-subtitle"
-                                    : "subTitle contact-subtitle"
-                            }
-                        >
-                            {contactInfo.subtitle}
-                        </p>
-                        <div
-                            className={
-                                isDark ? "dark-mode contact-text-div" : "contact-text-div"
-                            }
-                        >
-                            {contactInfo.number && (
-                                <>
-                                    <a
-                                        className="contact-detail"
-                                        href={"tel:" + contactInfo.number}
-                                    >
-                                        {contactInfo.number}
-                                    </a>
-                                    <br/>
-                                    <br/>
-                                </>
-                            )}
-                            <a
-                                className="contact-detail-email"
-                                href={"mailto:" + contactInfo.email_address}
-                            >
-                                {contactInfo.email_address}
-                            </a>
+  const {isDark} = useContext(StyleContext);
+  return (
+    <Fade bottom duration={1000} distance="20px">
+      <div className="main contact-margin-top" id="contact">
+        <div className="contact-div-main">
+          <div className="contact-header">
+            <h1 className="heading contact-title">{contactInfo.title}</h1>
+            <p
+              className={
+                isDark
+                  ? "dark-mode contact-subtitle"
+                  : "subTitle contact-subtitle"
+              }
+            >
+              {contactInfo.subtitle}
+            </p>
+            <div
+              className={
+                isDark ? "dark-mode contact-text-div" : "contact-text-div"
+              }
+            >
+              {contactInfo.number && (
+                <>
+                  <a
+                    className="contact-detail"
+                    href={"tel:" + contactInfo.number}
+                  >
+                    {contactInfo.number}
+                  </a>
+                  <br />
+                  <br />
+                </>
+              )}
+              <a
+                className="contact-detail-email"
+                href={"mailto:" + contactInfo.email_address}
+              >
+                {contactInfo.email_address}
+              </a>
 
-                            <h4>Discover my schedule and book a face-to-face meeting with me instead of sending endless
-                                emails. Just click the "Book Meeting" button.</h4>
-                            <CalandlyButton className={"fixedButton"} href={"https://bit.ly/amrhassan-availability"} text={"Book Meeting"}></CalandlyButton>
-                            <br/>
-                            <br/>
-                            <SocialMedia/>
-                        </div>
-                    </div>
-                    <div className="contact-image-div">
-                        {illustration.animated ? (
-                            <DisplayLottie animationData={email}/>
-                        ) : (
-                            <img
-                                alt="Man working"
-                                src={require("../../assets/images/contactMailDark.svg")}
-                            ></img>
-                        )}
-                    </div>
-
-                </div>
+              <h4>
+                Discover my schedule and book a face-to-face meeting with me
+                instead of sending endless emails. Just click the "Book Meeting"
+                button.
+              </h4>
+              <CalandlyButton
+                className={"fixedButton"}
+                href={"https://bit.ly/amrhassan-availability"}
+                text={"Book Meeting"}
+              ></CalandlyButton>
+              <br />
+              <br />
+              <SocialMedia />
             </div>
-        </Fade>
-    );
+          </div>
+          <div className="contact-image-div">
+            {illustration.animated ? (
+              <DisplayLottie animationData={email} />
+            ) : (
+              <img
+                alt="Man working"
+                src={require("../../assets/images/contactMailDark.svg")}
+              ></img>
+            )}
+          </div>
+        </div>
+      </div>
+    </Fade>
+  );
 }

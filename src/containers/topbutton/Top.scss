@@ -1,16 +1,14 @@
 @import "../../_globalColor";
 
-
 .topButton {
   position: fixed;
   bottom: 20px;
   right: 30px;
   z-index: 99;
   font-size: 25px;
-
 }
 
-.fixedButton{
+.fixedButton {
   border: none;
   outline: none;
   background-color: $buttonColor;

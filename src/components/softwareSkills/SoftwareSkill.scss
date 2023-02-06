@@ -8,7 +8,7 @@
   margin-top: 0px;
   text-align: center;
 }
-.skills-listing{
+.skills-listing {
   display: flex;
   flex-wrap: wrap;
 }
@@ -20,17 +20,17 @@
   margin: 0 4px;
   background-color: #899094;
   border-radius: 100%;
-  width: .25rem;
-  height: .25rem;
+  width: 0.25rem;
+  height: 0.25rem;
 }
-.new-years{
+.new-years {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   border: 0 solid;
   color: #424d53;
 }
-.new{
+.new {
   tab-size: 4;
   -webkit-text-size-adjust: 100%;
   word-break: break-all;
@@ -39,7 +39,7 @@
   border: 0 solid;
   font-size: 14px;
   line-height: 20px;
-  font-family: Inter,serif;
+  font-family: Inter, serif;
   font-weight: 400;
   background-color: #e0f3f5;
   color: #132128;
@@ -54,14 +54,14 @@
   color: white;
   cursor: pointer;
 }
-.newWrapper{
+.newWrapper {
   tab-size: 4;
   -webkit-text-size-adjust: 100%;
   font-size: 16px;
   line-height: 24px;
   word-break: break-all;
   white-space: pre-wrap;
-  font-family: Inter,serif;
+  font-family: Inter, serif;
   font-weight: 400;
   color: #424d53;
   margin: 0;

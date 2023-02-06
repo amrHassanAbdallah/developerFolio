@@ -41,36 +41,50 @@ function Header() {
         <ul className={isDark ? "dark-menu menu" : "menu"}>
           {viewSkills && (
             <li>
-              <a href="/#/skills" onClick={()=>scroll("skills")}>Skills</a>
+              <a href="/#/skills" onClick={() => scroll("skills")}>
+                Skills
+              </a>
             </li>
           )}
           {viewExperience && (
             <li>
-              <a href="/#/experience" onClick={()=>scroll("experience")}>Work Experiences</a>
+              <a href="/#/experience" onClick={() => scroll("experience")}>
+                Work Experiences
+              </a>
             </li>
           )}
           {viewOpenSource && (
             <li>
-              <a href="/#/opensource" onClick={()=>scroll("opensource")}>Open Source</a>
+              <a href="/#/opensource" onClick={() => scroll("opensource")}>
+                Open Source
+              </a>
             </li>
           )}
           {viewAchievement && (
             <li>
-              <a href="/#/achievements" onClick={()=>scroll("achievements")}>Achievements</a>
+              <a href="/#/achievements" onClick={() => scroll("achievements")}>
+                Achievements
+              </a>
             </li>
           )}
           {viewBlog && (
             <li>
-              <a href="/#/blogs" onClick={()=>scroll("blogs")}>Blogs</a>
+              <a href="/#/blogs" onClick={() => scroll("blogs")}>
+                Blogs
+              </a>
             </li>
           )}
           {viewTalks && (
             <li>
-              <a href="#talks" onClick={()=>scroll("talks")}>Talks</a>
+              <a href="#talks" onClick={() => scroll("talks")}>
+                Talks
+              </a>
             </li>
           )}
           <li>
-            <a href="/#/contact" onClick={()=>scroll("contact")}>Contact Me</a>
+            <a href="/#/contact" onClick={() => scroll("contact")}>
+              Contact Me
+            </a>
           </li>
           <li>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
@@ -83,9 +97,9 @@ function Header() {
     </Headroom>
   );
 }
-const scroll = (tag)=>{
+const scroll = tag => {
   document.getElementById(tag).scrollIntoView({
-    behavior: "smooth",
+    behavior: "smooth"
   });
-}
+};
 export default Header;

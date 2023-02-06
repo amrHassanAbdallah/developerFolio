@@ -59,8 +59,6 @@ export default function Skills() {
                   </p>
                 );
               })}
-
-
             </div>
           </div>
         </Fade>

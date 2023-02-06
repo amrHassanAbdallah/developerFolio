@@ -25,11 +25,15 @@ export default function Top() {
   }; //To make sure that this button is not visible at starting.
   // When the user clicks on the button, scroll to the top of the document
   return (
-      <div id="fixed-button">
-        <button onClick={TopEvent} id="topButton" className="fixedButton topButton" title="Go to top">
-          <i className="fas fa-hand-point-up" aria-hidden="true"></i>
-        </button>
-      </div>
-
+    <div id="fixed-button">
+      <button
+        onClick={TopEvent}
+        id="topButton"
+        className="fixedButton topButton"
+        title="Go to top"
+      >
+        <i className="fas fa-hand-point-up" aria-hidden="true"></i>
+      </button>
+    </div>
   );
 }

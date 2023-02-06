@@ -1,9 +1,9 @@
 const fs = require("fs");
 const https = require("https");
-const {authenticate} = require('@google-cloud/local-auth');
+const {authenticate} = require("@google-cloud/local-auth");
 const path = require("path");
 process = require("process");
-const {google} = require('googleapis');
+const {google} = require("googleapis");
 
 require("dotenv").config();
 
@@ -132,31 +132,37 @@ if (MEDIUM_USERNAME !== undefined) {
   req.end();
 }
 
-
-
-
-async function downloadResume(){
+async function downloadResume() {
   const documentId = process.env.RESUME_DOCUMENT_ID;
-  const resumePath = path.join(".","public","resume.pdf")
+  const resumePath = path.join(".", "public", "resume.pdf");
 
-  const auth = new google.auth.GoogleAuth({keyFile: 'token.json', scopes: ['https://www.googleapis.com/auth/drive.readonly','https://www.googleapis.com/auth/cloud-platform','https://www.googleapis.com/auth/drive','https://www.googleapis.com/auth/drive.file','https://www.googleapis.com/auth/drive']});
+  const auth = new google.auth.GoogleAuth({
+    keyFile: "token.json",
+    scopes: [
+      "https://www.googleapis.com/auth/drive.readonly",
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/drive",
+      "https://www.googleapis.com/auth/drive.file",
+      "https://www.googleapis.com/auth/drive"
+    ]
+  });
 
-
-  const drive = google.drive( "v3");
+  const drive = google.drive("v3");
   var dest = fs.createWriteStream(resumePath);
-  drive.files.get({fileId:documentId, alt: 'media', auth}, {responseType: 'stream'},
-  function(err, res){
-    res.data
-        .on('end', () => {
-      console.log('Done');
-    })
-  .on('error', err => {
-      console.log('error', err);
-    })
-  .pipe(dest);
-  })
-
+  drive.files.get(
+    {fileId: documentId, alt: "media", auth},
+    {responseType: "stream"},
+    function (err, res) {
+      res.data
+        .on("end", () => {
+          console.log("Done");
+        })
+        .on("error", err => {
+          console.log("error", err);
+        })
+        .pipe(dest);
+    }
+  );
 }
 
-downloadResume()
-
+downloadResume();

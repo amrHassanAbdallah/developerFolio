@@ -34,6 +34,11 @@
     "format": "prettier --write \"./**/*.{js,css,json,scss}\"",
     "check-format": "prettier -c \"./**/*.{js,css,json,scss}\""
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "format"
+    }
+  },
   "eslintConfig": {
     "extends": "react-app"
   },

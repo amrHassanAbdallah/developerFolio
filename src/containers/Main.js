@@ -40,22 +40,21 @@ const Main = () => {
   }, []);
 
   useEffect(() => {
-    let elements = window.location.href.split("/#/")
-    let target = elements.length > 1 ? elements[1]:null
-    if(!isShowingSplashAnimation && target != null){
+    let elements = window.location.href.split("/#/");
+    let target = elements.length > 1 ? elements[1] : null;
+    if (!isShowingSplashAnimation && target != null) {
       scrollToTarget(target);
     }
-  },[isShowingSplashAnimation])
+  }, [isShowingSplashAnimation]);
 
-  const scrollToTarget = (tag) => {
+  const scrollToTarget = tag => {
     setTimeout(() => {
-      let target =  document.getElementById(tag)
-      if (target){
+      let target = document.getElementById(tag);
+      if (target) {
         target.scrollIntoView({
-          behavior: "smooth",
+          behavior: "smooth"
         });
       }
-
     }, 100);
   };
 

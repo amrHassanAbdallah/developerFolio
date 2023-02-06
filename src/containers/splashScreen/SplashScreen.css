@@ -21,3 +21,8 @@
   -webkit-font-variant-ligatures: no-common-ligatures;
   padding: 0 20px;
 }
+@media (max-width: 600px) {
+  .splash-title-container{
+    font-size: 1.5rem;
+  }
+}

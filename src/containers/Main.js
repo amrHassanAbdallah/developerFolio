@@ -76,7 +76,7 @@ const Main = () => {
         behavior: "smooth", block: "center", inline: "nearest"
       });
       if (cb != null){
-        waitForTime(20).then(
+        waitForTime(40).then(
             cb(tag)
         )
       }

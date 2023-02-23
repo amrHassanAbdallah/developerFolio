@@ -30,10 +30,19 @@ function App() {
         <Route path="/blogs">
           <Route index element={<Main />} />
         </Route>
-        <Route path="/contact">
+        <Route
+          path="/contact"
+          render={() => {
+            window.ga("set", "page", "/contact");
+            window.ga("send", "pageview");
+          }}
+        >
           <Route index element={<Main />} />
         </Route>
         <Route path="/experience">
+          <Route index element={<Main />} />
+        </Route>
+        <Route path="/availability">
           <Route index element={<Main />} />
         </Route>
       </Routes>

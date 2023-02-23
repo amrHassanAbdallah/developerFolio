@@ -93,14 +93,14 @@
   color: $skillsColor;
 }
 @media (min-width: 361px) and (max-width: 768px) {
-  .newWrapper .new{
+  .newWrapper .new {
     font-size: 14px;
     text-align: center;
   }
 }
 
 @media (max-width: 361px) {
-  .newWrapper  .new{
+  .newWrapper .new {
     font-size: 10px;
   }
 }

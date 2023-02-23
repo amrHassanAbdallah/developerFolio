@@ -19,7 +19,6 @@ import {splashScreen} from "../portfolio";
 import {StyleProvider} from "../contexts/StyleContext";
 import {useLocalStorage} from "../hooks/useLocalStorage";
 import "./Main.scss";
-import {PopupButton} from "react-calendly";
 
 const Main = () => {
   const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
@@ -43,17 +42,24 @@ const Main = () => {
     let elements = window.location.href.split("/#/");
     let target = elements.length > 1 ? elements[1] : null;
     if (!isShowingSplashAnimation && target != null) {
-      scrollToTarget(target);
+      const cb = (target)=>{
+        if (target === "availability"){
+          document.querySelector("#availability button").click();
+        }
+      }
+      scrollToTarget(target,cb);
+
     }
   }, [isShowingSplashAnimation]);
 
-  const scrollToTarget = tag => {
+  const scrollToTarget = (tag,cb = ()=>{}) => {
     setTimeout(() => {
       let target = document.getElementById(tag);
       if (target) {
         target.scrollIntoView({
           behavior: "smooth"
         });
+        cb(tag)
       }
     }, 100);
   };

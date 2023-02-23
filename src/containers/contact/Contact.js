@@ -55,6 +55,7 @@ export default function Contact() {
                 button.
               </h4>
               <CalandlyButton
+
                 className={"fixedButton"}
                 href={"https://bit.ly/amrhassan-availability"}
                 text={"Book Meeting"}

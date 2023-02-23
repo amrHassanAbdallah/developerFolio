@@ -19,7 +19,25 @@ import {splashScreen} from "../portfolio";
 import {StyleProvider} from "../contexts/StyleContext";
 import {useLocalStorage} from "../hooks/useLocalStorage";
 import "./Main.scss";
-
+const waitTillElementLoaded = async (target) =>{
+  for (let i = 0; i < 6; i++) {
+    const element = document.getElementById(target);
+    if (element) {
+      console.log('The element exists.');
+      break;
+    } else {
+      console.log('The element does not exist yet. Retrying in 1 second...');
+      await new Promise(resolve => setTimeout(resolve, 80));
+    }
+  }
+}
+function waitForTime(time) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve();
+    }, time);
+  });
+}
 const Main = () => {
   const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
   const [isDark, setIsDark] = useLocalStorage("isDark", darkPref.matches);
@@ -52,16 +70,18 @@ const Main = () => {
     }
   }, [isShowingSplashAnimation]);
 
-  const scrollToTarget = (tag,cb = ()=>{}) => {
-    setTimeout(() => {
-      let target = document.getElementById(tag);
-      if (target) {
-        target.scrollIntoView({
-          behavior: "smooth", block: "center", inline: "nearest"
-        });
-        cb(tag)
+  const scrollToTarget = (tag,cb = null) => {
+    waitTillElementLoaded(tag).then(()=>{
+      document.getElementById(tag).scrollIntoView({
+        behavior: "smooth", block: "center", inline: "nearest"
+      });
+      if (cb != null){
+        waitForTime(20).then(
+            cb(tag)
+        )
       }
-    }, 200);
+    })
+
   };
 
   const changeTheme = () => {

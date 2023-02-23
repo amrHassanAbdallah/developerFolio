@@ -57,11 +57,11 @@ const Main = () => {
       let target = document.getElementById(tag);
       if (target) {
         target.scrollIntoView({
-          behavior: "smooth"
+          behavior: "smooth", block: "center", inline: "nearest"
         });
         cb(tag)
       }
-    }, 100);
+    }, 200);
   };
 
   const changeTheme = () => {

@@ -8,7 +8,7 @@ export default function Resume() {
 
   return (
     <div className="iframe-pdf">
-      <iframe title="resume" src="./resume.pdf"></iframe>
+      <iframe title="resume" src="./resume.pdf#toolbar=0"></iframe>
     </div>
   );
 }

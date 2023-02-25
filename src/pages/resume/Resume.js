@@ -9,6 +9,13 @@ export default function Resume() {
   return (
     <div className="iframe-pdf">
       <iframe title="resume" src="./resume.pdf#toolbar=0"></iframe>
+      <a
+          href="/"
+          className="fixedButton topButton"
+          title="Go to home"
+      >
+        <i className="fas  fa-home" aria-hidden="true"></i>
+      </a>
     </div>
   );
 }

@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "@google-cloud/local-auth": "^2.1.0",
     "@twemoji/api": "github:jdecked/twemoji",
     "colorthief": "^2.3.0",

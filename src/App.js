@@ -4,6 +4,7 @@ import "./assets/fonts/times new roman italic.ttf";
 import Main from "./containers/Main";
 import {HashRouter, Route, Routes} from "react-router-dom";
 import Resume from "./pages/resume/Resume";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
   return (

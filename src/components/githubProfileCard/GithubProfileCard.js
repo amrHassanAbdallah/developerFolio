@@ -24,7 +24,7 @@ export default function GithubProfileCard({prof}) {
             </h4>
             <CalandlyButton
               className={"fixedButton"}
-              href={"https://bit.ly/amrhassan-availability"}
+              href={"https://bit.ly/amr-hassan-availability"}
               text={"Book Meeting"}
             ></CalandlyButton>
             <br />

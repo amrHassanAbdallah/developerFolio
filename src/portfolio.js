@@ -432,6 +432,7 @@ const servicesSection = {
         "Unleash the full potential of WordPress and PHP to create unique and powerful online experiences. I craft custom themes, plugins, and integrations that extend functionality, personalize user journeys, and seamlessly connect your website to other platforms. Leverage my expertise in PHP and best coding practices to ensure secure, efficient, and scalable solutions that evolve with your needs.",
       image: require("./assets/images/extend&empower.jpeg"),
       imageAlt: "Extend & Empower (WordPress & PHP)",
+      link:"",
       footerLink: [
       {name: "WordPress development"},
       {name: "PHP development"},

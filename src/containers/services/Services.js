@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import "./Services.scss";
-import AchievementCard from "../../components/achievementCard/AchievementCard";
+import ServiceCard from "../../components/serviceCard/ServiceCard";
 import {servicesSection} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
@@ -36,7 +36,7 @@ export default function Services() {
           <div className="achievement-cards-div">
             {servicesSection.data.map((card, i) => {
               return (
-                <AchievementCard
+                <ServiceCard
                   key={i}
                   isDark={isDark}
                   cardInfo={{

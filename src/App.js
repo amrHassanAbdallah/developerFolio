@@ -43,6 +43,15 @@ function App() {
         <Route path="/experience">
           <Route index element={<Main />} />
         </Route>
+        <Route
+          path="/services"
+          render={() => {
+            window.ga("set", "page", "/services");
+            window.ga("send", "pageview");
+          }}
+        >
+          <Route index element={<Main />} />
+        </Route>
         <Route path="/availability">
           <Route index element={<Main />} />
         </Route>

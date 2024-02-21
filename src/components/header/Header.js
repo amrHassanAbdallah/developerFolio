@@ -62,8 +62,8 @@ function Header() {
           )}
           {viewAchievement && (
             <li>
-              <a href="/#/achievements" onClick={() => scroll("achievements")}>
-                Achievements
+              <a href={"/#/"+ (achievementSection.menuTitle.toLocaleLowerCase() || "achievements")} onClick={() => scroll(achievementSection.menuTitle.toLocaleLowerCase() || "achievements")}>
+                {achievementSection.menuTitle || "Achievements"}
               </a>
             </li>
           )}

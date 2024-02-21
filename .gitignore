@@ -25,3 +25,10 @@ yarn-error.log*
 #user generated content
 public/profile.json
 public/blogs.json
+
+.idea
+*.pdf
+*.gz
+token.json
+public/font-awesome.min.css
+public/resume.pdf

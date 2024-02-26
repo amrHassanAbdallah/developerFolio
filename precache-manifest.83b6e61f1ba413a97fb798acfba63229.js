@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "78f830cdb8bb1558bc8fe9a63129bd0f",
+    "revision": "a45c3920788d20cbd1e499af648ca068",
     "url": "/index.html"
   },
   {
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/4.d7ceb645.chunk.css"
   },
   {
-    "revision": "4d0609feb798cd17c9f8",
+    "revision": "46d5ac61184858be5b3b",
     "url": "/static/css/main.5a9f5264.chunk.css"
   },
   {
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/4.81226794.chunk.js"
   },
   {
-    "revision": "4d0609feb798cd17c9f8",
-    "url": "/static/js/main.904e3c25.chunk.js"
+    "revision": "46d5ac61184858be5b3b",
+    "url": "/static/js/main.d751c478.chunk.js"
   },
   {
     "revision": "fa5ece0450a76634cf46",
@@ -52,10 +52,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Montserrat-Regular.ee653992.ttf"
   },
   {
-    "revision": "2b689ac22a5795d13952ea077a9f0a7e",
-    "url": "/static/media/automation.2b689ac2.jpeg"
-  },
-  {
     "revision": "47a7a717679b640ceb1b05d38c480a61",
     "url": "/static/media/codeInLogo.47a7a717.webp"
   },
@@ -64,16 +60,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/contactMailDark.51cf7192.svg"
   },
   {
-    "revision": "989baf03f81462f4d3a299ec0baceefd",
-    "url": "/static/media/craft-fs.989baf03.jpeg"
-  },
-  {
     "revision": "59389695208d7454c6607bed51ed4316",
     "url": "/static/media/developerActivity.59389695.svg"
-  },
-  {
-    "revision": "51cca563fa61c93f5967d7d46cc469b8",
-    "url": "/static/media/extend&empower.51cca563.jpeg"
   },
   {
     "revision": "1a575a4138e5f366474f0e7c5bd614a5",
@@ -154,6 +142,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "25018d29d5ab115bc51c3e9a2d92f90f",
     "url": "/static/media/saayaHealthLogo.25018d29.webp"
+  },
+  {
+    "revision": "e967d5101a1e5c975126ebe704dcd4ab",
+    "url": "/static/media/services_automation.e967d510.webp"
+  },
+  {
+    "revision": "79ee095df545ffad038f6bfef332ab9f",
+    "url": "/static/media/services_craft-fs.79ee095d.webp"
+  },
+  {
+    "revision": "4d7f28c5a6f4e64a268ff892aa583709",
+    "url": "/static/media/services_extend_empower.4d7f28c5.webp"
   },
   {
     "revision": "3440939881da8339d1597e8d77cdf850",

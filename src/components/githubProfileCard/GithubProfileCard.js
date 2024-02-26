@@ -17,18 +17,18 @@ export default function GithubProfileCard({prof}) {
               <p className="subTitle blog-subtitle">{contactInfo.subtitle}</p>
             </div>
             <h2 className="bio-text">"{emoji(String(prof.bio))}"</h2>
-            <h4>
-              Discover my schedule and book a face-to-face meeting with me
-              instead of sending endless emails. Just click the "Book Meeting"
-              button.
-            </h4>
-            <CalandlyButton
-              className={"fixedButton"}
-              href={"https://bit.ly/amr-hassan-availability"}
-              text={"Book Meeting"}
-            ></CalandlyButton>
-            <br />
-            <br />
+              <h4>
+                Discover my schedule and book a face-to-face meeting with me
+                instead of sending endless emails. Just click the "Let's talk!"
+                button.
+              </h4>
+              <div className="button-greeting-div-center">
+                <Button
+                  text="Let's talk!"
+                  newTab={true}
+                  href={"https://bit.ly/book-meeting-w-me"}
+                />
+              </div>
 
             <SocialMedia />
           </div>

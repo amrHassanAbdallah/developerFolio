@@ -10,7 +10,8 @@ import {
   openSource,
   blogSection,
   talkSection,
-  achievementSection
+  achievementSection,
+  servicesSection,
 } from "../../portfolio";
 
 function Header() {
@@ -19,6 +20,7 @@ function Header() {
   const viewOpenSource = openSource.display;
   const viewSkills = skillsSection.display;
   const viewAchievement = achievementSection.display;
+  const viewService = servicesSection.display;
   const viewBlog = blogSection.display;
   const viewTalks = talkSection.display;
 
@@ -62,8 +64,39 @@ function Header() {
           )}
           {viewAchievement && (
             <li>
-              <a href={"/#/"+ (achievementSection.menuTitle.toLocaleLowerCase() || "achievements")} onClick={() => scroll(achievementSection.menuTitle.toLocaleLowerCase() || "achievements")}>
+              <a
+                href={
+                  "/#/" +
+                  (achievementSection.menuTitle.toLocaleLowerCase() ||
+                    "achievements")
+                }
+                onClick={() =>
+                  scroll(
+                    achievementSection.menuTitle.toLocaleLowerCase() ||
+                      "achievements"
+                  )
+                }
+              >
                 {achievementSection.menuTitle || "Achievements"}
+              </a>
+            </li>
+          )}
+          {viewService && (
+            <li>
+              <a
+                href={
+                  "/#/" +
+                  (servicesSection.menuTitle.toLocaleLowerCase() ||
+                    "services")
+                }
+                onClick={() =>
+                  scroll(
+                    servicesSection.menuTitle.toLocaleLowerCase() ||
+                      "services"
+                  )
+                }
+              >
+                {servicesSection.menuTitle || "Services"}
               </a>
             </li>
           )}

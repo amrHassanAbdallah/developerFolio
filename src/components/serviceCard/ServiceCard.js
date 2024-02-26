@@ -1,7 +1,7 @@
 import React from "react";
 import "./ServiceCard.scss";
 
-export default function ServiceCard({cardInfo, isDark}) {
+export default function ServiceCard({cardInfo, isDark, serviceURL}) {
   function openUrlInNewTab(url, name) {
     if (!url) {
       console.log(`URL for ${name} not found`);
@@ -12,7 +12,7 @@ export default function ServiceCard({cardInfo, isDark}) {
   }
 
   return (
-    <div className={isDark ? "dark-mode certificate-card" : "certificate-card"}>
+    <a className={isDark ? "dark-mode certificate-card" : "certificate-card"} href={serviceURL}>
       <div className="certificate-image-div">
         <img
           src={cardInfo.image}
@@ -43,6 +43,6 @@ export default function ServiceCard({cardInfo, isDark}) {
           );
         })}
       </div>
-    </div>
+    </a>
   );
 }

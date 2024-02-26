@@ -26,12 +26,16 @@
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 .certificate-detail-div {
   text-align: center;
 }
 .certificate-card:hover {
   box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+  cursor: pointer;
+  text-decoration: none;
+
 }
 .dark-mode.certificate-card:hover {
   box-shadow: $achievementCertificateCardHoverDark 0px 20px 30px -10px;

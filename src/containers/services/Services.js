@@ -39,6 +39,7 @@ export default function Services() {
                 <ServiceCard
                   key={i}
                   isDark={isDark}
+                  serviceURL={card.url}
                   cardInfo={{
                     title: card.title,
                     description: card.subtitle,

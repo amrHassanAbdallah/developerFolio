@@ -6,7 +6,7 @@ import {Fade} from "react-reveal";
 import email from "../../assets/lottie/email";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
-import CalandlyButton from "../../components/calendlyButton/CalandlyButton";
+import Button from "../../components/button/Button";
 
 export default function Contact() {
   const {isDark} = useContext(StyleContext);
@@ -51,15 +51,17 @@ export default function Contact() {
 
               <h4>
                 Discover my schedule and book a face-to-face meeting with me
-                instead of sending endless emails. Just click the "Book Meeting"
+                instead of sending endless emails. Just click the "Let's talk!"
                 button.
               </h4>
-              <CalandlyButton
+              <div className="button-greeting-div-center">
+                <Button
+                  text="Let's talk!"
+                  newTab={true}
+                  href={"https://bit.ly/book-meeting-w-me"}
+                />
+              </div>
 
-                className={"fixedButton"}
-                href={"https://bit.ly/amrhassan-availability"}
-                text={"Book Meeting"}
-              ></CalandlyButton>
               <br />
               <br />
               <SocialMedia />

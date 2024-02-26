@@ -7,6 +7,8 @@ import WorkExperience from "./workExperience/WorkExperience";
 import Projects from "./projects/Projects";
 import StartupProject from "./StartupProjects/StartupProject";
 import Achievement from "./achievement/Achievement";
+import Services from "./services/Services";
+
 import Blogs from "./blogs/Blogs";
 import Talks from "./talks/Talks";
 import Podcast from "./podcast/Podcast";
@@ -104,6 +106,7 @@ const Main = () => {
             <Projects />
             <StartupProject />
             <Achievement />
+            <Services />
             <Blogs />
             <Talks />
             <Twitter />

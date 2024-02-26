@@ -1,7 +1,13 @@
 .experience-cards-div {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
   gap: 1rem 1rem;
+  flex-wrap: wrap; /* Allow multi-line wrapping */
+  justify-content: center; /* Center items horizontally */
+}
+
+.experience-cards-div div{
+    flex: 1 0 32.33%;
+    max-width: 600px;
 }
 
 .experience-heading {
@@ -10,7 +16,6 @@
 }
 
 .experience-container {
-  display: flex;
   width: 90%;
   padding: 20px 10px;
   margin: 0px auto;

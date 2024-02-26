@@ -213,13 +213,25 @@ const techStack = {
 // Work experience section
 
 const workExperiences = {
-  display: true, //Set it to true to show workExperiences Section
+  display: true,
   experience: [
+    {
+      role: "Senior Software Engineer",
+      company: "Alraedah",
+      companylogo: require("./assets/images/alraedah.jpeg"),
+      date: "Jun 2024 – Dec 2023",
+      descBullets: [
+        "Architected and implemented innovative and efficient solutions in collaboration with a team of 4 talented engineers.",
+        "Increased development speed by 20% and improved maintainability by migrating to configuration-based integrations.",
+        "Optimized and expedited multiple environment deployments through the implementation of efficient CI/CD pipelines, leveraging GitHub deployments for seamless and rapid software releases.",
+        "Actively participated in code reviews, and documented and enforced coding standards."
+      ]
+    },
     {
       role: "Senior Software Engineer",
       company: "SWVL",
       companylogo: require("./assets/images/swvlLogo.jpeg"),
-      date: "Jan 2022 – Present",
+      date: "Jan 2022 – Nov 2022",
       descBullets: [
         "Led a team of 7 engineers to deliver high-quality and efficient solutions",
         "Implemented a solution that reduced the number of resources fetched by ~0.001x for the TaaS solution, resulting in decreased execution time and reduced bigQuery bill.",
@@ -233,7 +245,7 @@ const workExperiences = {
       role: "FullStack JavaScript Session Lead",
       company: "Udacity",
       companylogo: require("./assets/images/udacityLogo.jpeg"),
-      date: "Dec 2021 - Present ",
+      date: "Dec 2021 - Nov 2022",
       descBullets: [
         "Led informative presentations and provided code snippets to students in various areas of study to enhance their understanding and ensure adherence to course content.",
         "Developed FAQ documents that reduced student inquiries and improved graduation rates.",
@@ -321,11 +333,11 @@ const achievementSection = {
 
   achievementsCards: [
     {
-      title: "Google Code-In Finalist",
+      title: "Scripting Mastery",
       subtitle:
         "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
       image: require("./assets/images/codeInLogo.webp"),
-      imageAlt: "Google Code-In Logo",
+      imageAlt: "Scripting Mastery",
       footerLink: [
         {
           name: "Certification",
@@ -372,6 +384,69 @@ const achievementSection = {
   display: false // Set false to hide this section, defaults to true
 };
 
+const servicesSection = {
+  title: emoji("Innovative Software Development Solutions"),
+  id: "services",
+  subtitle: "Empowering Your Business Through Tailored Code",
+  menuTitle: "Services", //Set it to true to show workExperiences Section
+  data: [
+    {
+      title: "Craft Interactive Experiences (Web & Mobile)",
+      subtitle:
+        "Breathe life into your digital vision across web and mobile platforms. I build user-friendly, responsive websites and native apps tailored to your audience and device. From seamless design to secure backend architecture, I leverage diverse technologies like HTML, CSS, JavaScript, Swift, Kotlin, and Java to craft experiences that engage and empower.",
+      image: require("./assets/images/craft-fs.jpeg"),
+      imageAlt: "Scripting Mastery",
+      url:"https://bit.ly/project-app-development",
+      footerLink: [
+        {
+          name: "web development"
+        },
+        {
+          name: "mobile development"
+        },
+        {
+          name: "user experience"
+        },
+        {name: "responsive design"},
+        {name: "native apps"},
+        {name: "performance"},
+        {name: "security"}
+      ]
+    },
+    {
+      title: "Unlock Data & Automation (Python & Golang & JavaScript)",
+      subtitle:
+        "Harness the power of data and automation to streamline your processes and unlock valuable insights. I utilize Python and Golang to build custom scripts, tools, and APIs that automate tasks, scrape data, analyze information, and fuel your applications. Whether you need robust backend solutions, efficient data processing, or tailored automation scripts, I'm your go-to expert.",
+      image: require("./assets/images/automation.jpeg"),
+      imageAlt: "Unlock Data & Automation (Python & Golang & JavaScript)",
+      url:"https://bit.ly/project-scraping",
+      footerLink: [//Python development, Golang development, automation, data analysis, API development, data scraping, machine learning
+        {name: "Python development"},
+        {name: "Golang development"},
+        {name: "data analysis"},
+        {name: "data scraping"},
+        {name: "machine learning"}
+      ]
+    },
+    {
+      title: "Extend & Empower (WordPress & PHP)",
+      subtitle:
+        "Unleash the full potential of WordPress and PHP to create unique and powerful online experiences. I craft custom themes, plugins, and integrations that extend functionality, personalize user journeys, and seamlessly connect your website to other platforms. Leverage my expertise in PHP and best coding practices to ensure secure, efficient, and scalable solutions that evolve with your needs.",
+      image: require("./assets/images/extend&empower.jpeg"),
+      imageAlt: "Extend & Empower (WordPress & PHP)",
+      url:"https://bit.ly/project-php",
+      footerLink: [
+      {name: "WordPress development"},
+      {name: "PHP development"},
+      {name: "custom themes,"},
+      {name: "plugins"},
+      {name: "integrations"},
+      {name: "scalability"},
+      ]
+    }
+  ],
+  display: true // Set false to hide this section, defaults to true
+};
 // Blogs Section
 
 const blogSection = {
@@ -459,6 +534,7 @@ export {
   openSource,
   bigProjects,
   achievementSection,
+  servicesSection,
   blogSection,
   talkSection,
   podcastSection,

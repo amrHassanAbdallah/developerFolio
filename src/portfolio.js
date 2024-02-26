@@ -394,7 +394,7 @@ const servicesSection = {
       title: "Craft Interactive Experiences (Web & Mobile)",
       subtitle:
         "Breathe life into your digital vision across web and mobile platforms. I build user-friendly, responsive websites and native apps tailored to your audience and device. From seamless design to secure backend architecture, I leverage diverse technologies like HTML, CSS, JavaScript, Swift, Kotlin, and Java to craft experiences that engage and empower.",
-      image: require("./assets/images/craft-fs.jpeg"),
+      image: require("./assets/images/services_craft-fs.webp"),
       imageAlt: "Scripting Mastery",
       url:"https://bit.ly/project-app-development",
       footerLink: [
@@ -417,7 +417,7 @@ const servicesSection = {
       title: "Unlock Data & Automation (Python & Golang & JavaScript)",
       subtitle:
         "Harness the power of data and automation to streamline your processes and unlock valuable insights. I utilize Python and Golang to build custom scripts, tools, and APIs that automate tasks, scrape data, analyze information, and fuel your applications. Whether you need robust backend solutions, efficient data processing, or tailored automation scripts, I'm your go-to expert.",
-      image: require("./assets/images/automation.jpeg"),
+      image: require("./assets/images/services_automation.webp"),
       imageAlt: "Unlock Data & Automation (Python & Golang & JavaScript)",
       url:"https://bit.ly/project-scraping",
       footerLink: [//Python development, Golang development, automation, data analysis, API development, data scraping, machine learning
@@ -432,7 +432,7 @@ const servicesSection = {
       title: "Extend & Empower (WordPress & PHP)",
       subtitle:
         "Unleash the full potential of WordPress and PHP to create unique and powerful online experiences. I craft custom themes, plugins, and integrations that extend functionality, personalize user journeys, and seamlessly connect your website to other platforms. Leverage my expertise in PHP and best coding practices to ensure secure, efficient, and scalable solutions that evolve with your needs.",
-      image: require("./assets/images/extend&empower.jpeg"),
+      image: require("./assets/images/services_extend_empower.webp"),
       imageAlt: "Extend & Empower (WordPress & PHP)",
       url:"https://bit.ly/project-php",
       footerLink: [

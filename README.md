@@ -140,6 +140,7 @@ Optionally, you can link the blogs section to your medium user account:
 ```env
 // .env
 MEDIUM_USERNAME = "YOUR MEDIUM USERNAME"
+RESUME_DOCUMENT_ID = "RESUME_DOCUMENT_ID"
 ```
 
 * For Github Action, change the environment variable `MEDIUM_USERNAME` in `.github/workflows/deploy.yml`

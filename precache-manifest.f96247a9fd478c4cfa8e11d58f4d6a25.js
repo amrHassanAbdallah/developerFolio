@@ -1,47 +1,47 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4d0de03dc8263be4ca86290af796b46c",
+    "revision": "0030e7678c6c01dbfbe8bb2fafe31c61",
     "url": "/index.html"
   },
   {
-    "revision": "71dfc105232d715edccc",
+    "revision": "2ef01932fd8b631b681f",
     "url": "/static/css/2.cd2b735c.chunk.css"
   },
   {
-    "revision": "7b4d01059e4175defa63",
+    "revision": "a59f34e0bc838fbbb804",
     "url": "/static/css/3.df879eac.chunk.css"
   },
   {
-    "revision": "02a4aa1e3c59837c6f07",
+    "revision": "b2d3db37069afb654fa9",
     "url": "/static/css/4.d7ceb645.chunk.css"
   },
   {
-    "revision": "47bf6b7f28d0a103bbdd",
+    "revision": "5e0a9dcdc6c8114dce74",
     "url": "/static/css/main.5a9f5264.chunk.css"
   },
   {
-    "revision": "71dfc105232d715edccc",
-    "url": "/static/js/2.1657cb28.chunk.js"
+    "revision": "2ef01932fd8b631b681f",
+    "url": "/static/js/2.59d3375f.chunk.js"
   },
   {
     "revision": "57c8b3ae73f4723c858fdedfe46f85a9",
-    "url": "/static/js/2.1657cb28.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.59d3375f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7b4d01059e4175defa63",
-    "url": "/static/js/3.35a2d5cf.chunk.js"
+    "revision": "a59f34e0bc838fbbb804",
+    "url": "/static/js/3.89928195.chunk.js"
   },
   {
-    "revision": "02a4aa1e3c59837c6f07",
-    "url": "/static/js/4.952062d3.chunk.js"
+    "revision": "b2d3db37069afb654fa9",
+    "url": "/static/js/4.ede1dd5e.chunk.js"
   },
   {
-    "revision": "47bf6b7f28d0a103bbdd",
-    "url": "/static/js/main.d55ece7e.chunk.js"
+    "revision": "5e0a9dcdc6c8114dce74",
+    "url": "/static/js/main.d9f6f27b.chunk.js"
   },
   {
-    "revision": "826c8cfa4e71a5b25e43",
-    "url": "/static/js/runtime-main.6b645cad.js"
+    "revision": "660536aa7f862144b8be",
+    "url": "/static/js/runtime-main.a6091858.js"
   },
   {
     "revision": "21f233e19402cc4a66866a7f31191f0d",
@@ -50,6 +50,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ee6539921d713482b8ccd4d0d23961bb",
     "url": "/static/media/Montserrat-Regular.ee653992.ttf"
+  },
+  {
+    "revision": "cf554de16989e96fe0751a68a1b53442",
+    "url": "/static/media/bitbang.cf554de1.png"
   },
   {
     "revision": "47a7a717679b640ceb1b05d38c480a61",

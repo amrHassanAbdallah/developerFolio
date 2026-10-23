@@ -1,25 +1,16 @@
 import React from "react";
 import "./SoftwareSkill.scss";
-import {skillsSection} from "../../portfolio";
+import {technicalExpertise} from "../../portfolio";
 
 export default function SoftwareSkill() {
   return (
-    <div>
-      <div className="software-skills-main-div">
-        <div className="skills-listing">
-          {skillsSection.softwareSkills.map((skills, i) => {
-            return (
-              <div key={i} className="newWrapper">
-                <div className="new">
-                  {skills.skillName}
-                  <span className="new-separator"></span>
-                  <span className="new-years_">{skills.experience}</span>
-                </div>
-              </div>
-            );
-          })}
+    <div className="skill-groups">
+      {technicalExpertise.groups.map(group => (
+        <div key={group.heading} className="skill-group">
+          <h3 className="skill-group-heading">{group.heading}</h3>
+          <p className="subTitle skill-group-items mono">{group.items.join(", ")}</p>
         </div>
-      </div>
+      ))}
     </div>
   );
 }

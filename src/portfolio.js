@@ -2,38 +2,22 @@
 
 // To change portfolio colors globally go to the  _globalColor.scss file
 
-import emoji from "react-easy-emoji";
-import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
-
-// Splash Screen
-const yearsOfExperience = {
-    meh: "1 year or less",
-    beginner: "2 - 3 years",
-    pro: "4 - 6 years",
-    super: "7 - 9 years",
-    superulterproce: "10+ years"
-};
-const splashScreen = {
-    enabled: true, // set false to disable splash screen
-    animation: splashAnimation,
-    duration: 2000 // Set animation duration as per your animation
-};
-
-// Summary And Greeting Section
-
-const illustration = {
-    animated: true // Set to false to use static SVG
-};
+// Hero section
 
 const greeting = {
-    username: "Amr Hassan",
-    title: "Hi all, I'm Amr",
-    subTitle: emoji(
-        "Welcome to my personal corner of the web where my passion for software engineering and innovation comes to life. With " +
-        (new Date().getFullYear() - 2017) +
-        "+ years of experience in the industry and proficiency in Node.js, Golang, and PHP, I have a proven track record of delivering efficient and cost-effective solutions, leading teams and mentoring students. My ultimate goal is to continuously learn and grow, and I am eager to share my journey, knowledge, and skills with you through my blog and portfolio. Join me in exploring the world of software engineering and let's build something great together!"
-    ),
-    resumeLink: "/#/resume", // Set to empty to hide the button
+    eyebrow: "Amr Hassan",
+    headline: "Backend engineer building reliable distributed systems.",
+    description:
+        "I build backend services, integrate external platforms, and improve system performance and reliability. At inDrive, I owned the backend integration of WeRide’s autonomous fleet from API design through a field pilot in Saudi Arabia.",
+    actions: [
+        {text: "View experience", href: "/#/experience"},
+        {text: "View résumé", href: "/#/resume"},
+        {text: "Get in touch", href: "/#/contact"}
+    ],
+    featuredWork: {
+        text: "Read the autonomous-fleet integration case study",
+        to: "/experience?case=weride"
+    },
     displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -43,516 +27,272 @@ const socialMediaLinks = {
     github: "https://github.com/amrHassanAbdallah",
     linkedin: "https://www.linkedin.com/in/amr-hassan-abdullah/",
     gmail: "amr.hassan.abdullah@gmail.com",
-    twitter: "https://twitter.com/amrh434",
-    stackoverflow: "https://stackoverflow.com/users/7331793/amr-h",
     display: true // Set true to display this section, defaults to false
 };
 
-// Skills Section
+const capabilities = {
+    title: "Where I can help",
+    items: [
+        {
+            title: "Integrate external platforms",
+            description: "API contracts, vendor testing, and clear service boundaries for maintainable integrations.",
+            evidence: "See the WeRide integration",
+            to: "/experience?case=weride"
+        },
+        {
+            title: "Improve backend performance",
+            description: "Find bottlenecks in data services and ingestion pipelines. At Magalix, I reduced response time from 600 ms to 100 ms.",
+            evidence: "See the Magalix results",
+            to: "/experience?company=magalix"
+        },
+        {
+            title: "Prepare services for production",
+            description: "Reliability work, monitoring, alerting, and architecture reviews—from integration development through pilot support.",
+            evidence: "See production readiness at inDrive",
+            to: "/experience?company=indrive"
+        }
+    ]
+};
 
-const skillsSection = {
-    title: "What I do",
-    subTitle:
-        "Passionate, curious human being who loves digging under the hood of every new technology",
-    skills: [
-        emoji("⚡ Building the right thing the right way"),
-        emoji(
-            "⚡ Proficient in performance optimization and scalability, with a track record of success in improving system performance and increasing throughput"
-        ),
-        emoji(
-            "⚡ Strong experience in microservices architecture and cloud platforms, including GCP and AWS."
-        ),
-        emoji(
-            "⚡ Skilled in workflow management and documentation, with a focus on maintaining coding quality standards and collaborating with cross-functional teams."
-        )
-    ],
+// Technical expertise section
 
-    /* Make Sure to include correct Font Awesome Classname to view your icon
-    https://fontawesome.com/icons?d=gallery */
-
-    softwareSkills: [
-        {skillName: "Agile", experience: yearsOfExperience.pro},
+const technicalExpertise = {
+    title: "Technical expertise",
+    description: "My work spans API and vendor integrations, data-intensive services, and production operations—from defining contracts and architecture to monitoring, deployment, and migrations.",
+    groups: [
         {
-            skillName: "Bash (Gnu Bash)",
-            experience: yearsOfExperience.pro
-        },
-        {skillName: "Git", experience: yearsOfExperience.pro},
-        {
-            skillName: "GitHub",
-            experience: yearsOfExperience.pro
-        },
-        {skillName: "Jira (Atlassian)", experience: yearsOfExperience.pro},
-        {
-            skillName: "Microservices",
-            experience: yearsOfExperience.pro
-        },
-        {skillName: "MongoDB", experience: yearsOfExperience.pro},
-        {
-            skillName: "Node.js",
-            experience: yearsOfExperience.pro
+            heading: "Languages and runtimes",
+            items: ["Go", "Node.js", "PHP", "TypeScript"]
         },
         {
-            skillName: "PHP",
-            experience: yearsOfExperience.pro
-        },
-        {skillName: "PostgreSQL", experience: yearsOfExperience.pro},
-        {
-            skillName: "Redis",
-            experience: yearsOfExperience.pro
-        },
-        {skillName: "REST", experience: yearsOfExperience.pro},
-        {
-            skillName: "SQL",
-            experience: yearsOfExperience.pro
+            heading: "APIs and messaging",
+            items: ["gRPC", "REST", "Kafka"]
         },
         {
-            skillName: "TDD",
-            experience: yearsOfExperience.pro
+            heading: "Data",
+            items: ["PostgreSQL", "MongoDB", "Redis", "BigQuery"]
         },
         {
-            skillName: "AWS (Amazon Web Services)",
-            experience: yearsOfExperience.beginner
-        },
-        {
-            skillName: "CircleCI",
-            experience: yearsOfExperience.beginner
-        },
-        {skillName: "Docker", experience: yearsOfExperience.beginner},
-        {
-            skillName: "GCP (Google Cloud Platform)",
-            experience: yearsOfExperience.beginner
-        },
-        {
-            skillName: "BigTable",
-            experience: yearsOfExperience.beginner
-        },
-        {
-            skillName: "BigQuery",
-            experience: yearsOfExperience.beginner
-        },
-        {skillName: "Github Actions", experience: yearsOfExperience.beginner},
-        {
-            skillName: "Golang (Go)",
-            experience: yearsOfExperience.beginner
-        },
-        {skillName: "Kafka", experience: yearsOfExperience.beginner},
-        {
-            skillName: "Kubernetes",
-            experience: yearsOfExperience.beginner
-        },
-        {skillName: "Laravel", experience: yearsOfExperience.beginner},
-        {
-            skillName: "TypeScript",
-            experience: yearsOfExperience.beginner
-        },
-        {skillName: "Datadog", experience: yearsOfExperience.meh},
-        {
-            skillName: "DynamoDB (AWS)",
-            experience: yearsOfExperience.meh
-        },
-        {skillName: "Elastic Search", experience: yearsOfExperience.meh},
-        {
-            skillName: "Grafana",
-            experience: yearsOfExperience.meh
-        },
-        {skillName: "Jenkins", experience: yearsOfExperience.meh},
-        {
-            skillName: "Lambda",
-            experience: yearsOfExperience.meh
-        },
-        {skillName: "Prometheus", experience: yearsOfExperience.meh},
-        {
-            skillName: "Python",
-            experience: yearsOfExperience.meh
-        },
-        {skillName: "RDS (AWS)", experience: yearsOfExperience.meh},
-        {
-            skillName: "Terraform",
-            experience: yearsOfExperience.meh
+            heading: "Infrastructure and reliability",
+            items: [
+                "Kubernetes",
+                "Docker",
+                "AWS",
+                "GCP",
+                "CI/CD",
+                "Monitoring and alerting"
+            ]
         }
     ],
     display: true // Set false to hide this section, defaults to true
 };
 
-// Education Section
+// Education line, rendered after the employment entries in Work experience
 
-const educationInfo = {
-    display: true, // Set false to hide this section, defaults to true
-    schools: [
-        {
-            schoolName: "Helwan University",
-            logo: require("./assets/images/helwanLogo.jpeg"),
-            subHeader: "Bachelor of Science in Computer Science",
-            duration: "September 2015 - April 2019",
-            desc: "Scored excellent in the graduation project."
-        }
-    ]
-};
-
-// Your top 3 proficient stacks/tech experience
-
-const techStack = {
-    viewSkillBars: false, //Set it to true to show Proficiency Section
-    experience: [
-        {
-            Stack: "Frontend/Design", //Insert stack or technology you have experience in
-            progressPercentage: "90%" //Insert relative proficiency in percentage
-        },
-        {
-            Stack: "Backend",
-            progressPercentage: "70%"
-        },
-        {
-            Stack: "Programming",
-            progressPercentage: "60%"
-        }
-    ],
-    displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
+const education = {
+    line: "BSc Computer Science · Helwan University · 2015–2019"
 };
 
 // Work experience section
+// Each entry's `bullets` are shown initially; `moreBullets` sit under a
+// native <details> disclosure labelled "More at <company>".
 
 const workExperiences = {
     display: true,
     experience: [
         {
+            id: "indrive",
+            current: true,
+            role: "Senior Software Engineer",
+            company: "inDrive",
+            companylogo: require("./assets/images/indriveLogo.png"),
+            date: "Jul 2025 – Present",
+            caseStudy: {
+                id: "weride",
+                title: "Case study: WeRide fleet integration",
+                sections: [
+                    {heading: "The challenge", text: "Connect WeRide’s autonomous-vehicle fleet to inDrive’s ride-hailing platform for a field pilot in Saudi Arabia, while keeping vendor-specific logic out of shared platform services."},
+                    {heading: "My responsibility", text: "I designed and owned the integration backend using Go, Kafka, gRPC, and Kubernetes. I authored the API contract, tested the vendor sandbox, and drove architecture decisions across six teams with the Architecture Committee."},
+                    {heading: "The key decision", text: "Keep vendor-specific behavior within the integration rather than introducing it into shared platform services. The API contract and sandbox testing established the integration requirements; issues I reported were fixed before go-live."},
+                    {heading: "Delivery and outcome", text: "I prepared the service for production through reliability work, monitoring and alerting, and security and architecture reviews, then supported it through the Saudi field pilot."}
+                ]
+            },
+            bullets: [
+                "Owned the backend connecting WeRide’s autonomous fleet to inDrive’s ride-hailing platform, using Go, Kafka, gRPC, and Kubernetes, through a field pilot in Saudi Arabia.",
+                "Authored the vendor API contract and tested WeRide’s sandbox, identifying issues that were resolved before go-live.",
+                "Prepared the service for production with reliability work, monitoring and alerting, and security and architecture reviews; supported it throughout the pilot.",
+                "Drove architecture decisions across six teams and the Architecture Committee, keeping vendor-specific logic out of shared platform services."
+            ],
+            moreBullets: [
+                "Extended saved places across all inDrive business lines, including a zero-downtime data migration.",
+                "Designed a validation gate to catch invalid geographic data before release, then handed it over to the owning team."
+            ]
+        },
+        {
             role: "Senior Software Engineer",
             company: "BitBang",
             companylogo: require("./assets/images/bitbang.png"),
-            date: "Mar 2024 – Mar 2025",
-            descBullets: [
-                "Oversaw the entire backend squad for the Amplifidor project, managing execution, priorities, and scalability.",
-                "Planned and led technical debt reduction, improving system performance and maintainability.",
-                "Transitioned core systems to microservices, enabling 40% faster feature deployment.",
+            date: "Aug 2024 – Mar 2025",
+            bullets: [
+                "Led the backend squad for Amplifidor, managing execution, priorities, and scalability.",
+                "Built a federated service for user analytics and SSO data, simplifying deployments and feature rollouts."
+            ],
+            moreBullets: [
+                "Led technical debt reduction to improve backend performance and maintainability.",
                 "Created a shared utilities package used across 5+ services.",
-                "Strengthened monitoring by integrating Sentry, Grafana, and Prometheus and ELK, expediting issue resolution.",
-                "Automated CI/CD testing and deployments, increasing code quality and release speed.",
-                "Boosted system reliability by 30% through TDD adoption, developing 150+ unit tests."
+                "Integrated Sentry, Grafana, Prometheus, and ELK to improve monitoring and troubleshooting.",
+                "Automated testing and deployments through CI/CD pipelines.",
+                "Introduced test-driven development and wrote more than 150 unit tests."
             ]
         },
         {
             role: "Senior Software Engineer",
             company: "Alraedah",
             companylogo: require("./assets/images/alraedah.jpeg"),
-            date: "Jun 2024 – Dec 2023",
-            descBullets: [
-                "Architected and implemented innovative and efficient solutions in collaboration with a team of 4 talented engineers.",
-                "Increased development speed by 20% and improved maintainability by migrating to configuration-based integrations.",
-                "Optimized and expedited multiple environment deployments through the implementation of efficient CI/CD pipelines, leveraging GitHub deployments for seamless and rapid software releases.",
-                "Actively participated in code reviews, and documented and enforced coding standards."
+            date: "Jun 2023 – Dec 2023",
+            bullets: [
+                "Designed and implemented backend solutions with a team of four engineers.",
+                "Re-architected backend systems in Go, improving maintainability and integration speed by 20%."
+            ],
+            moreBullets: [
+                "Built CI/CD pipelines with GitHub deployments to streamline releases across environments.",
+                "Reviewed code and documented and enforced coding standards."
             ]
         },
         {
             role: "Senior Software Engineer",
             company: "SWVL",
             companylogo: require("./assets/images/swvlLogo.jpeg"),
-            date: "Jan 2022 – Nov 2022",
-            descBullets: [
-                "Led a team of 7 engineers to deliver high-quality and efficient solutions",
-                "Implemented a solution that reduced the number of resources fetched by ~0.001x for the TaaS solution, resulting in decreased execution time and reduced bigQuery bill.",
-                "Reviewed many PRs and established coding quality standards.",
-                "Refactored duplicated and unmonitored TaaS apps into our k8s cluster and automated part of the work, which improved the reliability and reduced the overall needed work.",
-                "Improved the stability and visibility of our B2B k8s environments by adding monitoring dashboards, creating playbooks and improving deployment scripts.",
+            date: "Jan 2022 – Dec 2022",
+            bullets: [
+                "Led a team of seven engineers, guiding delivery and code quality.",
+                "Improved B2B Kubernetes operations with monitoring dashboards, playbooks, and deployment scripts."
+            ],
+            moreBullets: [
+                "Optimized data fetching for the transportation-as-a-service platform to reduce execution time and BigQuery costs.",
+                "Established code-review and quality standards.",
+                "Consolidated duplicated transportation applications in Kubernetes and automated operational work to improve reliability.",
                 "Led technical and business discussions to understand customer needs and drive system improvements."
             ]
         },
         {
-            role: "FullStack JavaScript Session Lead",
+            role: "Full-stack JavaScript Session Lead",
             company: "Udacity",
             companylogo: require("./assets/images/udacityLogo.jpeg"),
-            date: "Dec 2021 - Nov 2022",
-            descBullets: [
-                "Led informative presentations and provided code snippets to students in various areas of study to enhance their understanding and ensure adherence to course content.",
-                "Developed FAQ documents that reduced student inquiries and improved graduation rates.",
-                "Built strong relationships with over 50 students, providing personalized feedback, leading class discussions and offering encouragement to support their learning and success."
+            date: "Dec 2021 – Nov 2022",
+            bullets: [
+                "Led full-stack JavaScript sessions with presentations, code examples, and feedback on student work.",
+                "Supported more than 50 students through feedback and class discussions."
+            ],
+            moreBullets: [
+                "Created FAQ documents to help students work through recurring questions."
             ]
         },
         {
             role: "Software Engineer",
             company: "Magalix",
+            id: "magalix",
             companylogo: require("./assets/images/magalixLogo.jpeg"),
-            date: "Sep 2019 - Dec 2021",
-            descBullets: [
-                "Improved time-series data serving performance by reducing response time from 600ms to 100ms and expanding write throughput.",
-                "Developed an application that integrates with Zapier, Slack, and Jira webhooks to extend recommendations analysis beyond the web application, identified a bottleneck and implemented circuit breakers, which increased the ingestion rate by 10x.",
-                "Led the process of establishing high-quality user and functional requirements based on identified business needs for 3 services.",
-                "Simplified connected cluster tracking by recording only the last seen time when needed, resulting in a reduction of network traffic by 2 requests per hour instead of 60 per hour for each cluster.",
-                "Received exceptional achievement award for consistently fixing and stabilizing the development environment."
+            date: "Sep 2019 – Dec 2021",
+            bullets: [
+                "Reduced time-series data response time from 600 ms to 100 ms and expanded write throughput.",
+                "Identified an ingestion bottleneck and implemented circuit breakers, increasing ingestion rate by 10×."
+            ],
+            moreBullets: [
+                "Built webhook integrations with Zapier, Slack, and Jira to make recommendations available beyond the web application.",
+                "Defined user and functional requirements for three services based on business needs.",
+                "Reduced per-cluster tracking requests from 60 to 2 per hour.",
+                "Received an exceptional achievement award for stabilizing the development environment."
             ]
         },
         {
             role: "Software Engineer",
             company: "Teknowl",
             companylogo: require("./assets/images/teknowlLogo.jpeg"),
-            date: "Nov 2017 - Nov 2018",
-            descBullets: [
-                "Implemented a content-type HAL package that abstracted the rendering logic between different models, which allowed joining data with simple keywords and streamlined the process of adding new relations, resulting in a 500% time savings.",
-                "Integrated Elasticsearch and designed its mapping and data sync, which significantly improved search capabilities by 3x, and added role-based search functionality.",
-                "Optimized MySQL queries by reducing the number of executed queries on multiple pages by 27%.",
-                "Promoted productivity and quality standards by sharing technical resources and encouraging team reflection on them.",
-                "Communicated solutions effectively by developing documentation, flowcharts, layouts, diagrams, and charts.",
-                "Led the shaping and maintenance of coding standards for a team of 5 backend engineers."
+            date: "Nov 2017 – Nov 2018",
+            bullets: [
+                "Built a reusable API response package using HAL (Hypertext Application Language), simplifying how related data models were represented.",
+                "Optimized MySQL queries, reducing executed queries on multiple pages by 27%."
+            ],
+            moreBullets: [
+                "Integrated Elasticsearch with data mappings, synchronization, and role-based search.",
+                "Shared technical resources and documented solutions with diagrams to support team decisions.",
+                "Established and maintained coding standards for five backend engineers."
             ]
         }
     ]
 };
 
-/* Your Open Source Section to View Your Github Pinned Projects
-To know how to get github key look at readme.md */
-
-const openSource = {
-    showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
-    display: true // Set false to hide this section, defaults to true
-};
-
-// Some big projects you have worked on
-
-const bigProjects = {
-    title: "Big Projects",
-    subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
-    projects: [
-        {
-            image: require("./assets/images/saayaHealthLogo.webp"),
-            projectName: "Saayahealth",
-            projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            footerLink: [
-                {
-                    name: "Visit Website",
-                    url: "http://saayahealth.com/"
-                }
-                //  you can add extra buttons here.
-            ]
-        },
-        {
-            image: require("./assets/images/nextuLogo.webp"),
-            projectName: "Nextu",
-            projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            footerLink: [
-                {
-                    name: "Visit Website",
-                    url: "http://nextu.se/"
-                }
-            ]
-        }
-    ],
-    display: false // Set false to hide this section, defaults to true
-};
-
-// Achievement Section
-// Include certificates, talks etc
-
-const achievementSection = {
-    title: emoji("Achievements And Certifications 🏆 "),
-    subtitle:
-        "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
-
-    achievementsCards: [
-        {
-            title: "Scripting Mastery",
-            subtitle:
-                "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
-            image: require("./assets/images/codeInLogo.webp"),
-            imageAlt: "Scripting Mastery",
-            footerLink: [
-                {
-                    name: "Certification",
-                    url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
-                },
-                {
-                    name: "Award Letter",
-                    url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
-                },
-                {
-                    name: "Google Code-in Blog",
-                    url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
-                }
-            ]
-        },
-        {
-            title: "Google Assistant Action",
-            subtitle:
-                "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
-            image: require("./assets/images/googleAssistantLogo.webp"),
-            imageAlt: "Google Assistant Action Logo",
-            footerLink: [
-                {
-                    name: "View Google Assistant Action",
-                    url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
-                }
-            ]
-        },
-
-        {
-            title: "PWA Web App Developer",
-            subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
-            image: require("./assets/images/pwaLogo.webp"),
-            imageAlt: "PWA Logo",
-            footerLink: [
-                {name: "Certification", url: ""},
-                {
-                    name: "Final Project",
-                    url: "https://pakistan-olx-1.firebaseapp.com/"
-                }
-            ]
-        }
-    ],
-    display: false // Set false to hide this section, defaults to true
-};
-
-const servicesSection = {
-    title: emoji("Innovative Software Development Solutions"),
-    id: "services",
-    subtitle: "Empowering Your Business Through Tailored Code",
-    menuTitle: "Services", //Set it to true to show workExperiences Section
-    data: [
-        {
-            title: "Craft Interactive Experiences (Web & Mobile)",
-            subtitle:
-                "Breathe life into your digital vision across web and mobile platforms. I build user-friendly, responsive websites and native apps tailored to your audience and device. From seamless design to secure backend architecture, I leverage diverse technologies like HTML, CSS, JavaScript, Swift, Kotlin, and Java to craft experiences that engage and empower.",
-            image: require("./assets/images/services_craft-fs.webp"),
-            imageAlt: "Scripting Mastery",
-            url: "https://bit.ly/project-app-development",
-            footerLink: [
-                {
-                    name: "web development"
-                },
-                {
-                    name: "mobile development"
-                },
-                {
-                    name: "user experience"
-                },
-                {name: "responsive design"},
-                {name: "native apps"},
-                {name: "performance"},
-                {name: "security"}
-            ]
-        },
-        {
-            title: "Unlock Data & Automation (Python & Golang & JavaScript)",
-            subtitle:
-                "Harness the power of data and automation to streamline your processes and unlock valuable insights. I utilize Python and Golang to build custom scripts, tools, and APIs that automate tasks, scrape data, analyze information, and fuel your applications. Whether you need robust backend solutions, efficient data processing, or tailored automation scripts, I'm your go-to expert.",
-            image: require("./assets/images/services_automation.webp"),
-            imageAlt: "Unlock Data & Automation (Python & Golang & JavaScript)",
-            url: "https://bit.ly/project-scraping",
-            footerLink: [//Python development, Golang development, automation, data analysis, API development, data scraping, machine learning
-                {name: "Python development"},
-                {name: "Golang development"},
-                {name: "data analysis"},
-                {name: "data scraping"},
-                {name: "machine learning"}
-            ]
-        },
-        {
-            title: "Extend & Empower (WordPress & PHP)",
-            subtitle:
-                "Unleash the full potential of WordPress and PHP to create unique and powerful online experiences. I craft custom themes, plugins, and integrations that extend functionality, personalize user journeys, and seamlessly connect your website to other platforms. Leverage my expertise in PHP and best coding practices to ensure secure, efficient, and scalable solutions that evolve with your needs.",
-            image: require("./assets/images/services_extend_empower.webp"),
-            imageAlt: "Extend & Empower (WordPress & PHP)",
-            url: "https://bit.ly/project-php",
-            footerLink: [
-                {name: "WordPress development"},
-                {name: "PHP development"},
-                {name: "custom themes,"},
-                {name: "plugins"},
-                {name: "integrations"},
-                {name: "scalability"},
-            ]
-        }
-    ],
-    display: true // Set false to hide this section, defaults to true
-};
-// Blogs Section
+// Writing section
 
 const blogSection = {
-    title: "Blogs",
-    subtitle:
-        "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
+    title: "Writing",
+    subtitle: "Notes on backend systems, infrastructure, and engineering trade-offs.",
     displayMediumBlogs: "false", // Set true to display fetched medium blogs instead of hardcoded ones
     blogs: [
         {
             url: "https://blog.amr-hassan.xyz/when-to-go-serverless",
-            title: "When To Go Serverless?",
-            description: "Discussing the benefits of serverless"
+            title: "When to go serverless",
+            description: "Trade-offs to consider before choosing serverless infrastructure."
         },
         {
             url: "https://blog.amr-hassan.xyz/kubernetes-namespaces-you-should-never-miss-with",
-            title: "Kubernetes namespaces you should never miss with",
-            description:
-                "Whenever you see kubernetes behaving different or you want to cut some resources, these are some namespaces that's essential to your k8s cluster"
+            title: "Kubernetes namespaces you should not mess with",
+            description: "System namespaces and why they matter to a working cluster."
         },
         {
             url: "https://blog.amr-hassan.xyz/message-queue-battle-royal-sqs-vs-kafka",
-            title: "Message queues SQS vs Kafka",
-            description: "different use-cases for kafka and SQS."
+            title: "SQS vs Kafka",
+            description: "Different messaging models and where each fits."
         }
     ],
+    seeMoreText: "More articles",
     seeMore: "https://blog.amr-hassan.xyz/",
     display: true // Set false to hide this section, defaults to true
 };
 
-// Talks Sections
-
-const talkSection = {
-    title: "TALKS",
-    subtitle: emoji(
-        "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
-    ),
-
-    talks: [
+// Public client feedback. Source details are recorded in docs/client-feedback-sources.md.
+const clientFeedback = {
+    title: "Client feedback",
+    subtitle: "Feedback from freelance projects.",
+    reviews: [
         {
-            title: "Build Actions For Google Assistant",
-            subtitle: "Codelab at GDG DevFest Karachi 2019",
-            slides_url: "https://bit.ly/saadpasta-slides",
-            event_url: "https://www.facebook.com/events/2339906106275053/"
+            id: "upwork-laravel",
+            quote: "Amr added a new feature to my Laravel application. He respected my deadline and delivered exactly what I needed.",
+            reviewer: "Upwork Client",
+            context: "Laravel feature development",
+            sourceLabel: "View Upwork profile",
+            sourceUrl: "https://www.upwork.com/freelancers/~0148eb64c3222c1bc6"
+        },
+        {
+            id: "fiverr-emadbashouty",
+            quote: "…understanding my requirements as a non-developer and guiding me through the development process…",
+            reviewer: "emadbashouty · Fiverr client",
+            context: "Client guidance · Review excerpt",
+            sourceLabel: "View Fiverr profile",
+            sourceUrl: "https://www.fiverr.com/amrhassan823"
         }
-    ],
-    display: false // Set false to hide this section, defaults to true
+    ]
 };
 
-// Podcast Section
-
-const podcastSection = {
-    title: emoji("Podcast 🎙️"),
-    subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
-
-    // Please Provide with Your Podcast embeded Link
-    podcast: [
-        "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
-    ],
-    display: false // Set false to hide this section, defaults to true
-};
+// Contact section
 
 const contactInfo = {
-    title: emoji("Contact Me ☎️"),
-    subtitle:
-        "Discuss a project or just want to say hi? My Inbox is open for all.",
-    email_address: socialMediaLinks.gmail
-};
-
-// Twitter Section
-
-const twitterDetails = {
-    userName: "twitter", //Replace "twitter" with your twitter username without @
-    display: false // Set true to display this section, defaults to false
+    title: "Get in touch",
+    subtitle: "Have a backend project or an engineering role in mind? Tell me about the system, the challenge, and what you need. My experience spans platform integrations, performance improvements, and production reliability.",
+    email_address: socialMediaLinks.gmail,
+    meetingLink: "https://bit.ly/book-meeting-w-me",
+    meetingLinkText: "Book a conversation"
 };
 
 export {
-    illustration,
     greeting,
+    capabilities,
     socialMediaLinks,
-    splashScreen,
-    skillsSection,
-    educationInfo,
-    techStack,
+    technicalExpertise,
+    education,
     workExperiences,
-    openSource,
-    bigProjects,
-    achievementSection,
-    servicesSection,
     blogSection,
-    talkSection,
-    podcastSection,
-    contactInfo,
-    twitterDetails
+    clientFeedback,
+    contactInfo
 };

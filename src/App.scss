@@ -1,9 +1,41 @@
 @import "./globalColor";
 
-@font-face {
-  font-family: "tnr-italic"; /*Can be any text*/
-  src: local("times new roman italic"),
-    url("./assets/fonts/times new roman italic.ttf") format("truetype");
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.section-heading {
+  position: relative;
+  padding-left: 20px;
+}
+
+.section-heading::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  width: 3px;
+  height: 1em;
+  background-color: $buttonColor;
+}
+
+.dark-mode .section-heading::before {
+  background-color: $accentDark;
+}
+
+@media (max-width: 768px) {
+  .section-heading {
+    padding-left: 16px;
+  }
+}
+
+.mono {
+  font-family: "IBM Plex Mono", Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  font-weight: 500;
 }
 
 .App {
@@ -33,4 +65,65 @@
 
 .subTitle {
   color: $subTitle;
+}
+
+.dark-mode .subTitle {
+  color: $subTitleDark;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+  outline: 2px solid $buttonColor;
+  outline-offset: 2px;
+}
+
+.dark-mode a:focus-visible,
+.dark-mode button:focus-visible,
+.dark-mode input:focus-visible,
+.dark-mode summary:focus-visible {
+  outline-color: $accentDark;
+}
+
+.main-button {
+  display: inline-block;
+  background-color: $buttonColor;
+  border: solid 1px $buttonColor;
+  color: #ffffff;
+  font-weight: 700;
+  width: max-content;
+  padding: 13px 22px;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.main-button:hover {
+  background-color: $buttonHover;
+}
+
+.dark-mode .main-button {
+  background-color: $accentDark;
+  border-color: $accentDark;
+  color: $darkBackground;
+}
+
+.dark-mode .main-button:hover {
+  background-color: $textColorDark;
 }

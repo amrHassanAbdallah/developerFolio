@@ -1,66 +1,48 @@
-import React, {useContext} from "react";
-import {Fade} from "react-reveal";
-import emoji from "react-easy-emoji";
+import React from "react";
+import {Link} from "react-router-dom";
 import "./Greeting.scss";
-import landingPerson from "../../assets/lottie/landingPerson";
-import DisplayLottie from "../../components/displayLottie/DisplayLottie";
-import SocialMedia from "../../components/socialMedia/SocialMedia";
-import Button from "../../components/button/Button";
-
-import {illustration, greeting} from "../../portfolio";
-import StyleContext from "../../contexts/StyleContext";
+import {greeting, socialMediaLinks} from "../../portfolio";
 
 export default function Greeting() {
-  const {isDark} = useContext(StyleContext);
   if (!greeting.displayGreeting) {
     return null;
   }
   return (
-    <Fade bottom duration={1000} distance="40px">
-      <div className="greet-main" id="greeting">
-        <div className="greeting-main">
-          <div className="greeting-text-div">
-            <div>
-              <h1
-                className={isDark ? "dark-mode greeting-text" : "greeting-text"}
-              >
-                {" "}
-                {greeting.title}{" "}
-                <span className="wave-emoji">{emoji("👋")}</span>
-              </h1>
-              <p
-                className={
-                  isDark
-                    ? "dark-mode greeting-text-p"
-                    : "greeting-text-p subTitle"
-                }
-              >
-                {greeting.subTitle}
-              </p>
-              <SocialMedia />
-              <div className="button-greeting-div">
-                {greeting.resumeLink && (
-                  <Button
-                    text="See my resume"
-                    newTab={true}
-                    href={greeting.resumeLink}
-                  />
-                )}
-              </div>
-            </div>
-          </div>
-          <div className="greeting-image-div">
-            {illustration.animated ? (
-              <DisplayLottie animationData={landingPerson} />
-            ) : (
-              <img
-                alt="man sitting on table"
-                src={require("../../assets/images/manOnTable.svg")}
-              ></img>
-            )}
-          </div>
-        </div>
+    <div className="greet-main container" id="greeting">
+      <div className="greeting-graphic" aria-hidden="true"></div>
+      <p className="greeting-eyebrow mono">{greeting.eyebrow}</p>
+      <h1 className="greeting-text">{greeting.headline}</h1>
+      <p className="subTitle greeting-text-p">{greeting.description}</p>
+      <div className="button-greeting-div">
+        {greeting.actions.map((action, index) => (
+          <a key={action.href} className={index === 0 ? "main-button" : "main-button greeting-secondary-action"} href={action.href}>
+            {action.text}
+          </a>
+        ))}
       </div>
-    </Fade>
+      <Link className="greeting-featured-work" to={greeting.featuredWork.to}>
+        {greeting.featuredWork.text} <span aria-hidden="true">→</span>
+      </Link>
+      <div className="greeting-quiet-links">
+        {socialMediaLinks.github && (
+          <a
+            href={socialMediaLinks.github}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        )}
+        {socialMediaLinks.linkedin && (
+          <a
+            href={socialMediaLinks.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        )}
+      </div>
+    </div>
   );
 }

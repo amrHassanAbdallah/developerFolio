@@ -1,42 +1,41 @@
-.experience-cards-div {
-  display: flex;
-  gap: 1rem 1rem;
-  flex-wrap: wrap; /* Allow multi-line wrapping */
-  justify-content: center; /* Center items horizontally */
+@import "../../_globalColor";
+
+.experience-container {
+  padding-top: 72px;
+  padding-bottom: 72px;
+  scroll-margin-top: 100px;
 }
 
-.experience-cards-div div{
-    flex: 1 0 32.33%;
-    max-width: 600px;
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .experience-heading {
-  font-size: 56px;
-  font-weight: 400;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 32px 0;
+  color: $textColor;
 }
 
-.experience-container {
-  width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
-  margin-top: 2rem;
+.dark-mode .experience-heading {
+  color: $textColorDark;
 }
 
-.experience-container > * {
-  flex: 1;
+.experience-education {
+  margin-top: 32px;
+  font-size: 16px;
 }
 
 /* Media Query */
 
-@media (max-width: 1380px) {
-  .experience-heading {
-    font-size: 40px;
-  }
-}
-
 @media (max-width: 768px) {
+  .experience-container {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
   .experience-heading {
-    font-size: 30px;
-    text-align: center;
+    font-size: 28px;
   }
 }

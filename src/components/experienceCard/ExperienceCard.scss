@@ -1,156 +1,165 @@
 @import "../../_globalColor";
 
 .experience-card {
+  scroll-margin-top: 100px;
   position: relative;
-  background-color: $lightBackground2;
-  box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
-  border-radius: 10px;
-  border: 1px solid $lightBorder1;
+  padding: 24px 0;
+  border-bottom: 1px solid $lightBorder1;
+  text-align: left;
 }
 
-.experience-card-dark {
-  position: relative;
-  background-color: $darkBackground;
-  box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
-  border-radius: 10px;
-  border: 1px solid $lightBorder1;
+.experience-card.dark-mode {
+  border-bottom-color: $darkBorder1;
 }
 
-.experience-card:hover {
-  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+.experience-card:last-child {
+  border-bottom: none;
 }
 
-.experience-banner {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 150%;
-  background: $experienceCardBannerLG;
-  border-radius: 10px 10px 0px 0px;
-  -webkit-filter: blur(0px);
-  -moz-filter: blur(0px);
-  -o-filter: blur(0px);
-  -ms-filter: blur(0px);
-  filter: blur(0px);
-  height: 11rem;
+/* Connects this row's logo to the next row's logo, confined to the gap
+   between cards so it never crosses over bullet text. */
+.experience-card:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 24px;
+  bottom: -24px;
+  width: 1px;
+  height: 24px;
+  background-color: $lightBorder1;
+}
+
+.experience-card.dark-mode:not(:last-child)::after {
+  background-color: $darkBorder1;
+}
+
+.experience-row-header {
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  align-items: center;
+  gap: 16px;
 }
 
-.experience-blurred_div {
-  position: absolute;
-  background: $experienceCardBlurredDivLG;
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
-  height: 11rem;
-  top: 0;
-  left: 0;
-  width: 100%;
-  border-radius: 10px 10px 0px 0px;
+.experience-logo {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: 1px solid $lightBorder1;
+  box-sizing: border-box;
 }
 
-.experience-div-company {
-  position: absolute;
-  background: transparent;
-  height: 9rem;
-  top: 0;
-  left: 0;
-  width: 100%;
+.dark-mode .experience-logo {
+  border-color: $darkBorder1;
+}
+
+.experience-company-initials {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: $lightBackground3;
+  color: $textColor;
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
-.experience-text-company {
-  text-align: center;
-  padding: 1.5rem;
+.experience-heading-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.experience-company {
   margin: 0;
-  color: $lightBackground1;
-  font-size: 25px;
-  text-align: center;
+  font-size: 18px;
   font-weight: 700;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  color: $textColor;
+}
+
+.dark-mode .experience-company {
+  color: $textColorDark;
+}
+
+.experience-role {
+  margin: 2px 0 0 0;
+  font-size: 16px;
+}
+
+.experience-company-line { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px; }
+.experience-current {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  padding: 2px 8px;
+  border: 1px solid $buttonColor;
+  border-radius: 4px;
+  color: $buttonColor;
+}
+.dark-mode .experience-current { border-color: $accentDark; color: $accentDark; }
+.experience-case-study { scroll-margin-top: 100px; }
+.experience-card:focus-visible { outline: 2px solid $buttonColor; outline-offset: 4px; }
+.dark-mode .experience-card:focus-visible { outline-color: $accentDark; }
+
+.experience-date {
+  margin: 0;
+  font-size: 14px;
+  text-align: right;
   white-space: nowrap;
 }
 
-.experience-roundedimg {
-  position: absolute;
-  object-fit: cover;
-  left: 0;
-  right: 0;
-  top: 7rem;
-  margin-left: auto;
-  margin-right: auto;
-  width: 8rem;
-  height: 8rem;
-  box-shadow: 0 0.5rem 1rem $lightBoxShadowDarker;
-  border-radius: 50%;
+.experience-bullets {
+  margin: 16px 0 0 0;
+  padding-left: 1.25rem;
 }
 
-.experience-text-role {
-  text-align: center;
-  color: $textColor;
-  font-weight: 700;
-  font-size: 25px;
-  margin: 0px;
-  padding-top: 1.5rem;
-  line-height: normal;
+.experience-bullets li {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 6px;
 }
-.dark-mode-text {
-  color: $textColorDark !important;
+
+.experience-more {
+  margin-top: 8px;
 }
-.experience-text-date {
-  text-align: center;
-  color: $textColor;
-  font-size: 20px;
-  margin: 0px;
-  padding-top: 1rem;
+
+.experience-more summary {
+  cursor: pointer;
+  font-size: 16px;
   font-weight: 600;
+  color: $buttonColor;
+  padding: 4px 0;
+  width: fit-content;
 }
 
-.experience-text-desc {
-  text-align: center;
+.dark-mode .experience-more summary {
+  color: $accentDark;
 }
 
-.experience-text-details {
-  padding: 1.5rem;
-  margin-top: 2rem;
+.experience-more .experience-bullets {
+  margin-top: 12px;
 }
+
+.case-study-content {
+  max-width: 72ch;
+  padding: 8px 0 8px 20px;
+  margin-top: 12px;
+  border-left: 2px solid $buttonColor;
+}
+.dark-mode .case-study-content { border-left-color: $accentDark; }
+.case-study-content h4 { margin: 20px 0 8px; }
+.case-study-content p { margin: 0; line-height: 1.65; }
 
 /* Media Query */
 
-@media (max-width: 1380px) {
-  .experience-text-role {
-    padding-top: 0.5rem;
-    font-size: 22px;
-  }
-  .experience-text-company {
-    font-size: 22px;
-  }
-  .experience-text-date {
-    font-size: 18px;
-  }
-  .experience-roundedimg {
-    width: 6.5rem;
-    height: 6.5rem;
-  }
-}
-
 @media (max-width: 768px) {
-  .experience-text-role {
-    font-size: 22px;
+  .experience-row-header {
+    flex-wrap: wrap;
   }
-  .experience-text-company {
-    font-size: 22px;
-  }
-  .experience-text-date {
-    font-size: 18px;
-  }
-  .experience-text-desc {
-    font-size: 16px;
+  .experience-date {
+    text-align: left;
+    width: 100%;
+    order: 3;
+    margin-top: 4px;
   }
 }

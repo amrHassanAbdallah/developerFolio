@@ -2,108 +2,47 @@
 
 .switch {
   position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  width: 54px;
+  height: 44px;
 }
-
-/* Fix visible slider checkbox */
-input {
-  transform: scale(0.5);
-}
-
-.slider {
+.switch input {
   position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.switch .slider {
+  position: absolute;
+  inset: 9px 0;
+  border-radius: 26px;
+  background: $toggleSwitchSliderBG;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: $toggleSwitchSliderBG;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
 }
-
-.slider::before {
-  position: absolute;
+.switch .slider::before {
   content: "";
+  position: absolute;
+  width: 26px;
   height: 26px;
-  width: 28px;
-  left: 0;
-  bottom: 0;
-  background-color: $textColorDark;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: $toggleCheck;
-}
-
-input:focus + .slider {
-  box-shadow: $toggleCheck;
-}
-
-input:checked + .slider::before,
-input:checked + .slider > .emoji {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-  display: flex;
-  align-items: center;
-}
-
-.slider.round::before {
   border-radius: 50%;
-  display: grid;
-  place-items: center;
+  background: #fff;
+  transition: transform 0.2s;
 }
-
-.slider::after {
-  display: inline;
-  position: absolute;
-  right: 9.3%;
-  bottom: 17.5%;
-}
-
-input:checked + .slider::after {
-  display: inline;
-  position: absolute;
-  right: 56.3%;
-  bottom: 14.5%;
-}
-
-.emoji {
-  z-index: 10;
+.switch input:checked + .slider { background: $toggleCheck; }
+.switch input:checked + .slider::before,
+.switch input:checked + .slider > .emoji { transform: translateX(28px); }
+.switch .emoji {
+  position: relative;
   display: flex;
   align-items: center;
-  margin-left: 2px;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  transition: transform 0.2s;
 }
-
-@media all and (max-width: 786px) and (min-width: 425px) {
-  input:checked + .slider::after {
-    right: 60.3%;
-    bottom: 20.5%;
-  }
-  .slider::after {
-    right: 15.3%;
-    bottom: 22.5%;
-  }
+.switch input:focus-visible + .slider {
+  outline: 3px solid $buttonColor;
+  outline-offset: 4px;
 }
-
-@media all and (max-width: 2560px) and (min-width: 1552px) {
-  .slider::after {
-    bottom: 12.5% !important;
-  }
-}
-
-@media all and (max-width: 1552px) and (min-width: 1440px) {
-  .slider::after {
-    bottom: 7.5% !important;
-  }
-}
+.dark-mode .switch input:focus-visible + .slider { outline-color: $accentDark; }

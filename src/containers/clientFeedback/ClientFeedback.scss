@@ -1,0 +1,28 @@
+@import "../../_globalColor";
+
+.client-feedback { padding-top: 72px; padding-bottom: 24px; }
+.client-feedback h2 { margin: 0 0 12px; font-size: 32px; }
+.client-feedback-intro { margin: 0 0 28px; font-size: 16px; line-height: 1.6; }
+.client-feedback-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.client-review {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 24px;
+  border: 1px solid $lightBorder1;
+  border-radius: 8px;
+}
+.client-review-context { font-size: 14px; margin: 0 0 16px; line-height: 1.5; }
+.client-review blockquote { margin: 0 0 24px; }
+.client-review blockquote p { margin: 0; font-size: 18px; line-height: 1.65; }
+.client-review figcaption { margin-top: auto; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.5; }
+.client-review-author { font-weight: 600; overflow-wrap: anywhere; }
+.client-review a { color: $buttonColor; text-underline-offset: 4px; width: fit-content; }
+.dark-mode .client-review { border-color: $darkBorder1; }
+.dark-mode .client-review a { color: $accentDark; }
+@media (max-width: 768px) {
+  .client-feedback { padding-top: 48px; }
+  .client-feedback h2 { font-size: 28px; }
+  .client-feedback-grid { grid-template-columns: 1fr; }
+  .client-review { padding: 20px; }
+}

@@ -1,0 +1,15 @@
+@import "../../_globalColor";
+
+.capabilities { padding-top: 8px; padding-bottom: 24px; }
+.capabilities h2 { font-size: 28px; margin: 0 0 24px; }
+.capabilities-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.capability { border-top: 1px solid $lightBorder1; padding-top: 20px; }
+.capability h3 { font-size: 18px; line-height: 1.4; margin: 0 0 12px; }
+.capability p { font-size: 16px; line-height: 1.6; margin: 0 0 16px; }
+.capability a { font-size: 16px; line-height: 1.6; color: $buttonColor; text-underline-offset: 4px; }
+.dark-mode .capability { border-color: $darkBorder1; }
+.dark-mode .capability a { color: $accentDark; }
+@media (max-width: 768px) {
+  .capabilities-grid { grid-template-columns: 1fr; gap: 20px; }
+  .capabilities h2 { font-size: 26px; }
+}

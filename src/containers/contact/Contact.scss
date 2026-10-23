@@ -1,87 +1,60 @@
 @import "../../_globalColor";
 
-.contact-div-main {
-  display: flex;
+#contact {
+  padding-top: 72px;
+  padding-bottom: 72px;
+  scroll-margin-top: 100px;
 }
 
 .dark-mode a {
   color: $textColorDark;
 }
 
-.contact-div-main > * {
-  flex: 1;
-}
-
 .contact-title {
-  font-size: 65px;
-  font-weight: 400;
-}
-
-.contact-detail,
-.contact-detail-email {
-  margin-top: 20px;
-  font-size: 40px;
-  font-weight: 400;
-  color: $subTitle;
-  text-decoration: none;
-}
-
-.contact-detail:hover,
-.contact-detail-email:hover {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
   color: $textColor;
-  text-shadow: 2px 1px 2px $contactDetailHoverTS;
-  transition: all 0.3s;
+}
+
+.dark-mode .contact-title {
+  color: $textColorDark;
 }
 
 .contact-subtitle {
-  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 65ch;
+  margin: 0 0 24px 0;
+}
+
+.contact-detail-email {
+  overflow-wrap: anywhere;
+  font-size: 20px;
+  font-weight: 600;
+  color: $buttonColor;
+  text-decoration: none;
+}
+
+.dark-mode .contact-detail-email {
+  color: $accentDark;
+}
+
+.contact-detail-email:hover {
+  text-decoration: underline;
 }
 
 .contact-text-div {
   margin-top: 1.5rem;
 }
 
-.contact-margin-top {
-  margin-top: 4rem;
-}
-
-.contact-image-div > img {
-  max-width: 100%;
-  height: auto;
-  margin-left: 1.5rem;
-  margin-top: -4rem;
-}
-
 /* Media Query */
-@media (max-width: 1380px), (max-width: 768px) {
+@media (max-width: 768px) {
+  #contact {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
   .contact-title {
-    font-size: 56px;
-    font-weight: 400;
-    text-align: center;
-  }
-
-  .contact-title {
-    font-size: 40px;
-    text-align: center;
-  }
-
-  .contact-subtitle {
-    font-size: 16px;
-    line-height: normal;
-    text-align: center;
-  }
-
-  .contact-text-div {
-    text-align: center;
-    margin-top: 1.5rem;
-  }
-
-  .contact-detail,
-  .contact-detail-email {
-    font-size: 20px;
-  }
-
-  .contact-image-div {
-    display: none;
+    font-size: 28px;
   }
 }

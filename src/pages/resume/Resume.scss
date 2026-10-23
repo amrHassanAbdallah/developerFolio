@@ -1,12 +1,40 @@
 @import "../../_globalColor";
+
 .iframe-pdf {
   height: 100vh;
+  position: relative;
 }
-iframe {
+
+.iframe-pdf iframe {
   display: block;
   width: 100%;
   height: 100%;
   border: none;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+.iframe-pdf .downloadButton {
+  bottom: 20px;
+  left: 30px;
+  position: fixed;
+  z-index: 99;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.resume-fallback {
+  padding-top: 72px;
+  padding-bottom: 72px;
+  text-align: left;
+}
+
+.resume-fallback-link {
+  display: block;
+  margin-top: 20px;
+  color: $buttonColor;
+}
+
+.dark-mode .resume-fallback-link {
+  color: $accentDark;
 }

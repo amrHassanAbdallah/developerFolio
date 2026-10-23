@@ -1,90 +1,70 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
+import {useLocation} from "react-router-dom";
 import Header from "../components/header/Header";
 import Greeting from "./greeting/Greeting";
-import Skills from "./skills/Skills";
-import StackProgress from "./skillProgress/skillProgress";
+import Capabilities from "./capabilities/Capabilities";
 import WorkExperience from "./workExperience/WorkExperience";
-import Projects from "./projects/Projects";
-import StartupProject from "./StartupProjects/StartupProject";
-import Achievement from "./achievement/Achievement";
-import Services from "./services/Services";
-
+import Skills from "./skills/Skills";
 import Blogs from "./blogs/Blogs";
-import Talks from "./talks/Talks";
-import Podcast from "./podcast/Podcast";
-import Education from "./education/Education";
+import ClientFeedback from "./clientFeedback/ClientFeedback";
+import Contact from "./contact/Contact";
 import ScrollToTopButton from "./topbutton/Top";
-import Twitter from "./twitter-embed/twitter";
-import Profile from "./profile/Profile";
-import SplashScreen from "./splashScreen/SplashScreen";
-import {splashScreen} from "../portfolio";
 import {StyleProvider} from "../contexts/StyleContext";
 import {useLocalStorage} from "../hooks/useLocalStorage";
 import "./Main.scss";
-const waitTillElementLoaded = async (target) =>{
-  for (let i = 0; i < 6; i++) {
-    const element = document.getElementById(target);
-    if (element) {
-      console.log('The element exists.');
-      break;
-    } else {
-      console.log('The element does not exist yet. Retrying in 1 second...');
-      await new Promise(resolve => setTimeout(resolve, 80));
-    }
-  }
-}
-function waitForTime(time) {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      resolve();
-    }, time);
-  });
-}
+import {workExperiences} from "../portfolio";
+
+const ROUTE_TO_SECTION_ID = {
+  "/experience": "experience",
+  "/skills": "skills",
+  "/blogs": "blogs",
+  "/contact": "contact"
+};
+
 const Main = () => {
   const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
   const [isDark, setIsDark] = useLocalStorage("isDark", darkPref.matches);
-  const [isShowingSplashAnimation, setIsShowingSplashAnimation] =
-    useState(true);
+  const location = useLocation();
 
   useEffect(() => {
-    if (splashScreen.enabled) {
-      const splashTimer = setTimeout(
-        () => setIsShowingSplashAnimation(false),
-        splashScreen.duration
-      );
-      return () => {
-        clearTimeout(splashTimer);
-      };
-    }
-  }, []);
-
-  useEffect(() => {
-    let elements = window.location.href.split("/#/");
-    let target = elements.length > 1 ? elements[1] : null;
-    if (!isShowingSplashAnimation && target != null) {
-      const cb = (target)=>{
-        if (target === "availability"){
-          document.querySelector("#availability button").click();
-        }
+    let targetId = location.pathname === "/" ? "greeting" : ROUTE_TO_SECTION_ID[location.pathname];
+    let focusTarget = false;
+    if (location.pathname === "/experience") {
+      const parameters = new URLSearchParams(location.search);
+      const caseStudy = workExperiences.experience.find(role => role.caseStudy && role.caseStudy.id === parameters.get("case"));
+      const company = workExperiences.experience.find(role => role.id && role.id === parameters.get("company"));
+      if (caseStudy) {
+        targetId = `case-study-${caseStudy.caseStudy.id}`;
+        focusTarget = true;
+      } else if (company) {
+        targetId = `experience-${company.id}`;
+        focusTarget = true;
       }
-      scrollToTarget(target,cb);
-
     }
-  }, [isShowingSplashAnimation]);
-
-  const scrollToTarget = (tag,cb = null) => {
-    waitTillElementLoaded(tag).then(()=>{
-      document.getElementById(tag).scrollIntoView({
-        behavior: "smooth", block: "center", inline: "nearest"
-      });
-      if (cb != null){
-        waitForTime(40).then(
-            cb(tag)
-        )
-      }
-    })
-
-  };
+    if (!targetId) {
+      return;
+    }
+    const target = document.getElementById(targetId);
+    if (!target) {
+      return;
+    }
+    if (target.tagName === "DETAILS") target.open = true;
+    if (focusTarget) {
+      const focusElement = target.tagName === "DETAILS" ? target.querySelector("summary") : target;
+      focusElement.focus({preventScroll: true});
+    }
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (location.pathname === "/") {
+      window.scrollTo({top: 0, behavior: prefersReducedMotion ? "auto" : "smooth"});
+      return;
+    }
+    target.scrollIntoView({
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+      block: "start"
+    });
+  }, [location.pathname, location.search, location.key]);
 
   const changeTheme = () => {
     setIsDark(!isDark);
@@ -93,28 +73,15 @@ const Main = () => {
   return (
     <div className={isDark ? "dark-mode" : null}>
       <StyleProvider value={{isDark: isDark, changeTheme: changeTheme}}>
-        {isShowingSplashAnimation && splashScreen.enabled ? (
-          <SplashScreen />
-        ) : (
-          <>
-            <Header />
-            <Greeting />
-            <Skills />
-            <StackProgress />
-            <WorkExperience />
-            <Education />
-            <Projects />
-            <StartupProject />
-            <Achievement />
-            <Services />
-            <Blogs />
-            <Talks />
-            <Twitter />
-            <Podcast />
-            <Profile />
-            <ScrollToTopButton />
-          </>
-        )}
+        <Header />
+        <Greeting />
+        <Capabilities />
+        <WorkExperience />
+        <Skills />
+        <Blogs />
+        <ClientFeedback />
+        <Contact />
+        <ScrollToTopButton />
       </StyleProvider>
     </div>
   );

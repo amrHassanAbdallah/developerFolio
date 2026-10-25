@@ -30,13 +30,18 @@ function Header() {
         <button
           type="button"
           className="menu-icon"
-          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-label={
+            isMenuOpen ? "Close navigation menu" : "Open navigation menu"
+          }
           aria-expanded={isMenuOpen}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
         </button>
-        <ul className={isDark ? "dark-menu menu" : "menu"} data-open={isMenuOpen}>
+        <ul
+          className={isDark ? "dark-menu menu" : "menu"}
+          data-open={isMenuOpen}
+        >
           {NAV_ITEMS.map(item => (
             <li key={item.to}>
               <Link to={item.to} onClick={closeMenu}>

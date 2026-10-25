@@ -14,11 +14,20 @@ beforeEach(() => {
   document.body.appendChild(root);
 });
 afterEach(() => {
-  act(() => { ReactDOM.unmountComponentAtNode(root); });
+  act(() => {
+    ReactDOM.unmountComponentAtNode(root);
+  });
   root.remove();
 });
 function render(path) {
-  act(() => { ReactDOM.render(<MemoryRouter initialEntries={[path]}><Main /></MemoryRouter>, root); });
+  act(() => {
+    ReactDOM.render(
+      <MemoryRouter initialEntries={[path]}>
+        <Main />
+      </MemoryRouter>,
+      root
+    );
+  });
 }
 
 test("a direct case-study link opens the disclosure and focuses its summary", () => {
@@ -33,15 +42,19 @@ test("evidence links navigate to a company and can reopen the same case study", 
   render("/experience?case=weride");
   const study = root.querySelector("#case-study-weride");
   study.open = false;
-  act(() => root.querySelector('.greeting-featured-work').click());
+  act(() => root.querySelector(".greeting-featured-work").click());
   expect(study.open).toBe(true);
-  act(() => root.querySelector('a[href="/experience?company=magalix"]').click());
+  act(() =>
+    root.querySelector('a[href="/experience?company=magalix"]').click()
+  );
   expect(document.activeElement.id).toBe("experience-magalix");
 });
 
 test("unknown evidence parameters fall back to the experience section", () => {
   render("/experience?case=unknown&company=unknown");
   expect(root.querySelector("#case-study-weride").open).toBe(false);
-  expect(document.activeElement).not.toBe(root.querySelector("#experience-magalix"));
+  expect(document.activeElement).not.toBe(
+    root.querySelector("#experience-magalix")
+  );
   expect(root.querySelector("#experience").scrollIntoView).toHaveBeenCalled();
 });

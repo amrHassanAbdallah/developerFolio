@@ -27,12 +27,19 @@ const Main = () => {
   const location = useLocation();
 
   useEffect(() => {
-    let targetId = location.pathname === "/" ? "greeting" : ROUTE_TO_SECTION_ID[location.pathname];
+    let targetId =
+      location.pathname === "/"
+        ? "greeting"
+        : ROUTE_TO_SECTION_ID[location.pathname];
     let focusTarget = false;
     if (location.pathname === "/experience") {
       const parameters = new URLSearchParams(location.search);
-      const caseStudy = workExperiences.experience.find(role => role.caseStudy && role.caseStudy.id === parameters.get("case"));
-      const company = workExperiences.experience.find(role => role.id && role.id === parameters.get("company"));
+      const caseStudy = workExperiences.experience.find(
+        role => role.caseStudy && role.caseStudy.id === parameters.get("case")
+      );
+      const company = workExperiences.experience.find(
+        role => role.id && role.id === parameters.get("company")
+      );
       if (caseStudy) {
         targetId = `case-study-${caseStudy.caseStudy.id}`;
         focusTarget = true;
@@ -50,14 +57,18 @@ const Main = () => {
     }
     if (target.tagName === "DETAILS") target.open = true;
     if (focusTarget) {
-      const focusElement = target.tagName === "DETAILS" ? target.querySelector("summary") : target;
+      const focusElement =
+        target.tagName === "DETAILS" ? target.querySelector("summary") : target;
       focusElement.focus({preventScroll: true});
     }
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
     if (location.pathname === "/") {
-      window.scrollTo({top: 0, behavior: prefersReducedMotion ? "auto" : "smooth"});
+      window.scrollTo({
+        top: 0,
+        behavior: prefersReducedMotion ? "auto" : "smooth"
+      });
       return;
     }
     target.scrollIntoView({

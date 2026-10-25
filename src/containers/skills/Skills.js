@@ -9,8 +9,12 @@ export default function Skills() {
   }
   return (
     <div className="container" id="skills">
-      <h2 className="skills-heading section-heading">{technicalExpertise.title}</h2>
-      <p className="subTitle skills-description">{technicalExpertise.description}</p>
+      <h2 className="skills-heading section-heading">
+        {technicalExpertise.title}
+      </h2>
+      <p className="subTitle skills-description">
+        {technicalExpertise.description}
+      </p>
       <SoftwareSkill />
     </div>
   );

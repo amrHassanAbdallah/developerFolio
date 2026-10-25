@@ -35,14 +35,19 @@ export default function ExperienceCard({cardInfo, isDark}) {
             onError={() => setLogoFailed(true)}
           />
         ) : (
-          <span className="experience-logo experience-company-initials" aria-hidden="true">
+          <span
+            className="experience-logo experience-company-initials"
+            aria-hidden="true"
+          >
             {cardInfo.company.charAt(0)}
           </span>
         )}
         <div className="experience-heading-text">
           <div className="experience-company-line">
             <h3 className="experience-company">{cardInfo.company}</h3>
-            {cardInfo.current && <span className="experience-current">Current role</span>}
+            {cardInfo.current && (
+              <span className="experience-current">Current role</span>
+            )}
           </div>
           <p className="subTitle experience-role">{cardInfo.role}</p>
         </div>
@@ -54,7 +59,10 @@ export default function ExperienceCard({cardInfo, isDark}) {
       <BulletList items={cardInfo.bullets} />
 
       {cardInfo.caseStudy && (
-        <details id={`case-study-${cardInfo.caseStudy.id}`} className="experience-more experience-case-study">
+        <details
+          id={`case-study-${cardInfo.caseStudy.id}`}
+          className="experience-more experience-case-study"
+        >
           <summary tabIndex={0}>{cardInfo.caseStudy.title}</summary>
           <div className="case-study-content">
             {cardInfo.caseStudy.sections.map(section => (

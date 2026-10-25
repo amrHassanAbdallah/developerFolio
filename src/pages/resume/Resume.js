@@ -11,13 +11,22 @@ export default function Resume() {
     let active = true;
     const timeout = setTimeout(() => controller.abort(), 10000);
     fetch("/resume.pdf", {signal: controller.signal})
-      .then(response => response.ok ? response.arrayBuffer() : null)
+      .then(response => (response.ok ? response.arrayBuffer() : null))
       .then(buffer => {
-        if (active) setStatus(buffer && isPdf(new Uint8Array(buffer)) ? "ready" : "missing");
+        if (active)
+          setStatus(
+            buffer && isPdf(new Uint8Array(buffer)) ? "ready" : "missing"
+          );
       })
-      .catch(() => { if (active) setStatus("missing"); })
+      .catch(() => {
+        if (active) setStatus("missing");
+      })
       .finally(() => clearTimeout(timeout));
-    return () => { active = false; clearTimeout(timeout); controller.abort(); };
+    return () => {
+      active = false;
+      clearTimeout(timeout);
+      controller.abort();
+    };
   }, []);
   useEffect(() => {
     document.title = "Amr Hassan | Resume";
@@ -27,7 +36,12 @@ export default function Resume() {
   }, []);
 
   if (status === "loading") {
-    return <div className="container resume-fallback"><h1>Résumé</h1><p role="status">Loading résumé…</p></div>;
+    return (
+      <div className="container resume-fallback">
+        <h1>Résumé</h1>
+        <p role="status">Loading résumé…</p>
+      </div>
+    );
   }
 
   if (status === "missing") {
@@ -48,7 +62,12 @@ export default function Resume() {
   return (
     <div className="iframe-pdf">
       <iframe title="resume" src="./resume.pdf#toolbar=0"></iframe>
-      <a href="/resume.pdf" download className="fixedButton downloadButton" title="Download PDF">
+      <a
+        href="/resume.pdf"
+        download
+        className="fixedButton downloadButton"
+        title="Download PDF"
+      >
         Download PDF
       </a>
       <Link to="/" className="fixedButton topButton" title="Go to home">

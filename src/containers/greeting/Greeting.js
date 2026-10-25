@@ -15,7 +15,15 @@ export default function Greeting() {
       <p className="subTitle greeting-text-p">{greeting.description}</p>
       <div className="button-greeting-div">
         {greeting.actions.map((action, index) => (
-          <a key={action.href} className={index === 0 ? "main-button" : "main-button greeting-secondary-action"} href={action.href}>
+          <a
+            key={action.href}
+            className={
+              index === 0
+                ? "main-button"
+                : "main-button greeting-secondary-action"
+            }
+            href={action.href}
+          >
             {action.text}
           </a>
         ))}

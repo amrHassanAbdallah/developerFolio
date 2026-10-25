@@ -8,7 +8,9 @@ export default function SoftwareSkill() {
       {technicalExpertise.groups.map(group => (
         <div key={group.heading} className="skill-group">
           <h3 className="skill-group-heading">{group.heading}</h3>
-          <p className="subTitle skill-group-items mono">{group.items.join(", ")}</p>
+          <p className="subTitle skill-group-items mono">
+            {group.items.join(", ")}
+          </p>
         </div>
       ))}
     </div>

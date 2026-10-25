@@ -16,8 +16,14 @@ function App() {
         <Route path="/contact" element={<Main />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/services" element={<Navigate to="/contact" replace />} />
-        <Route path="/availability" element={<Navigate to="/contact" replace />} />
-        <Route path="/opensource" element={<Navigate to="/contact" replace />} />
+        <Route
+          path="/availability"
+          element={<Navigate to="/contact" replace />}
+        />
+        <Route
+          path="/opensource"
+          element={<Navigate to="/contact" replace />}
+        />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </HashRouter>

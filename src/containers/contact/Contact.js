@@ -9,12 +9,20 @@ export default function Contact() {
       <h2 className="contact-title section-heading">{contactInfo.title}</h2>
       <p className="subTitle contact-subtitle">{contactInfo.subtitle}</p>
       <div className="contact-text-div">
-        <a className="contact-detail-email" href={"mailto:" + contactInfo.email_address}>
+        <a
+          className="contact-detail-email"
+          href={"mailto:" + contactInfo.email_address}
+        >
           {contactInfo.email_address}
         </a>
         {contactInfo.meetingLink && (
           <div className="button-greeting-div-center">
-            <a className="main-button" href={contactInfo.meetingLink} target="_blank" rel="noopener noreferrer">
+            <a
+              className="main-button"
+              href={contactInfo.meetingLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {contactInfo.meetingLinkText}
             </a>
           </div>
